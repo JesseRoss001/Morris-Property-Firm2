@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <!-- Custom CSS -->
     <style>
         /* Custom styles */
@@ -21,6 +24,11 @@
             background-color: #fff;
             color: #000;
             font-family: Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Bebas Neue", sans-serif !important;
+            font-weight: 400;
+            font-style: normal;
         }
         /* Header */
         .navbar {
@@ -117,24 +125,13 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        .areas-served ul {
-            list-style: none;
-            padding: 0;
-            columns: 2;
+        .areas-served .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
-        .areas-served ul li {
-            font-size: 1rem;
-            line-height: 1.8;
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-        }
-        .areas-served ul li::before {
-            content: "\f3c5";
-            font-family: 'Bootstrap Icons';
-            position: absolute;
-            left: 0;
-            top: 0;
+        .areas-served .list-item i {
+            margin-right: 10px;
             color: #000;
         }
         /* Footer */
@@ -150,6 +147,11 @@
         .footer a:hover {
             text-decoration: underline;
         }
+        /* Social Media Icons */
+        .footer .social-icons a {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .page-title h1 {
@@ -157,9 +159,6 @@
             }
             .contact-info {
                 margin-bottom: 30px;
-            }
-            .areas-served ul {
-                columns: 1;
             }
         }
     </style>
@@ -191,7 +190,15 @@
         </div>
     </nav>
 
-    
+  
+  
+    <section class="page-title">
+      
+        <div class="page-title-content">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+   
 
     <!-- Contact Section -->
     <section class="contact-section py-4">
@@ -201,13 +208,10 @@
                 <!-- Contact Information -->
                 <div class="col-md-6 contact-info">
                     <h5><i class="bi bi-telephone-fill"></i>Phone</h5>
-                    <p><a href="tel:+44 7814 001947">+44 7814 001947</a></p>
+                    <p><a href="tel:+447814001947">+44 7814 001947</a></p>
 
                     <h5><i class="bi bi-envelope-fill"></i>Email</h5>
                     <p><a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a></p>
-
-                    <h5><i class="bi bi-geo-alt-fill"></i>Address</h5>
-                    <p>123 Main Street,<br>Bangor, LL57 1AA<br>North Wales, UK</p>
 
                     <h5><i class="bi bi-clock-fill"></i>Working Hours</h5>
                     <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
@@ -218,7 +222,6 @@
                     <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                         <!-- Web3Forms Access Key -->
                         <input type="hidden" name="access_key" value="ae44b6d0-9991-4f69-974e-802f107a5cf3">
-                        <!-- Redirect URL -->
                         <!-- Subject -->
                         <input type="hidden" name="subject" value="New Contact Form Submission">
                         <!-- From Name -->
@@ -257,49 +260,199 @@
             <!-- Areas Served Section -->
             <div class="areas-served">
                 <h2>Areas We Serve in North Wales</h2>
-                <ul>
-                    <li>Bangor</li>
-                    <li>Colwyn Bay</li>
-                    <li>Llandudno</li>
-                    <li>Holyhead</li>
-                    <li>Rhyl</li>
-                    <li>Flint</li>
-                    <li>Wrexham</li>
-                    <li>Conwy</li>
-                    <li>Caernarfon</li>
-                    <li>Abergele</li>
-                    <li>Prestatyn</li>
-                    <li>Mold</li>
-                    <li>Porthmadog</li>
-                    <li>Bala</li>
-                    <li>Betws-y-Coed</li>
-                    <li>Dolgellau</li>
-                    <li>Pwllheli</li>
-                    <li>Other Surrounding Areas</li>
-                </ul>
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Bangor
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Colwyn Bay
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Llandudno
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Holyhead
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Rhyl
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Flint
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Wrexham
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Conwy
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Caernarfon
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Abergele
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Prestatyn
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Mold
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Porthmadog
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Bala
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Betws-y-Coed
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Dolgellau
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Pwllheli
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-3">
+                        <div class="list-item">
+                            <i class="bi bi-geo-alt-fill"></i>Other Surrounding Areas
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p>
-                Phone: <a href="tel:+441234567890">+44 1234 567890</a> | Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a> | 123 Main Street, Bangor, LL57 1AA
-            </p>
-            <p>
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-            </p>
-            <!-- Social Media Links -->
-            <p>
-                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
-            </p>
-            <p>&copy; 2023 Morris Property Firm. All Rights Reserved.</p>
+   <!-- Footer -->
+   <footer class="footer text-center">
+    <div class="container">
+        <p>
+            Phone: <a href="tel:+447814001947">+44 7814 001947</a> | Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>
+        </p>
+        <p>
+            <!-- Privacy Policy Trigger -->
+            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
+        </p>
+        <!-- Social Media Links -->
+        <p class="social-icons">
+            <a href="https://www.facebook.com/YourFacebookPage" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </p>
+        <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Privacy Policy Modal -->
+<div
+    class="modal fade"
+    id="privacyPolicyModal"
+    tabindex="-1"
+    aria-labelledby="privacyPolicyModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="privacyPolicyModalLabel">
+                    Privacy Policy
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <h4>Introduction</h4>
+                <p>
+                    We at Morris Property Firm are committed to protecting your
+                    privacy. This Privacy Policy explains how we collect, use, and
+                    share your personal data when you use our website.
+                </p>
+                <h4>Data Collection</h4>
+                <p>
+                    We collect personal data that you provide to us, such as your
+                    name, email address, and phone number, when you contact us through
+                    our website or sign up for our services.
+                </p>
+                <h4>Use of Data</h4>
+                <p>
+                    We use your personal data to respond to your inquiries, provide
+                    our services, and improve our website. We may also use your data
+                    for marketing purposes, with your consent.
+                </p>
+                <h4>Data Sharing</h4>
+                <p>
+                    We do not share your personal data with third parties, except as
+                    required by law or with your consent.
+                </p>
+                <h4>Your Rights</h4>
+                <p>
+                    You have the right to access, correct, and delete your personal
+                    data, as well as the right to object to or restrict our use of
+                    your data. To exercise these rights, please contact us at
+                    <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>.
+                </p>
+                <h4>GDPR Compliance</h4>
+                <p>
+                    We comply with the General Data Protection Regulation (GDPR),
+                    which means we take steps to protect your personal data and
+                    respect your privacy rights.
+                </p>
+                <h4>Changes to this Policy</h4>
+                <p>
+                    We may update this Privacy Policy from time to time. We will
+                    notify you of any changes by posting the new policy on our
+                    website.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+            </div>
         </div>
-    </footer>
+    </div>
+</div>
+
 
     <!-- Bootstrap JS and dependencies (if needed) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -330,5 +483,5 @@
             });
         });
     </script>
-  </body>
+</body>
 </html>
