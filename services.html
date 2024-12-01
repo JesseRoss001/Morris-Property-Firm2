@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Head Section -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Morris Property Firm</title>
+    <title>Our Services | Morris Property Firm (MPF)</title>
     <!-- Meta Description for SEO -->
-    <meta name="description" content="Explore the comprehensive property restoration, repairs, and maintenance services offered by Morris Property Firm in Bangor and North Wales.">
+    <meta name="description" content="Explore the comprehensive property restoration, repairs, and maintenance services offered by Morris Property Firm (MPF) in Bangor and North Wales. We organize everything for you.">
     <!-- Meta Keywords for SEO -->
-    <meta name="keywords" content="Property Restoration Bangor, Property Repairs North Wales, Property Maintenance Bangor, After Tenancy Maintenance, Plumbing Services Bangor, Electrical Services North Wales, Morris Property Firm Services">
+    <meta name="keywords" content="Property Restoration Bangor, Property Repairs North Wales, Property Maintenance Bangor, After Tenancy Maintenance, Plumbing Services Bangor, Electrical Services North Wales, Morris Property Firm Services, MPF">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         /* Custom styles */
@@ -46,16 +48,16 @@
             font-weight: bold;
             text-decoration: underline;
         }
-        /* Page Title */
-        .page-title {
+        /* Hero Section */
+        .hero {
             background-image: url('morris-property-hero-4 (2).jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
-            height: 50vh;
+            height: 70vh;
             position: relative;
         }
-        .page-title-overlay {
+        .hero-overlay {
             background-color: rgba(0, 0, 0, 0.6);
             height: 100%;
             width: 100%;
@@ -63,41 +65,31 @@
             top: 0;
             left: 0;
         }
-        .page-title-content {
+        .hero-content {
             position: relative;
             z-index: 2;
             top: 50%;
-            
+            transform: translateY(-50%);
             text-align: center;
             padding: 0 15px;
         }
-        .page-title h1 {
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
             color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
-        /* Services Section */
-        .service-item {
-            margin-bottom: 60px;
+        .hero p {
+            font-size: 1.5rem;
+            color: #e0e0e0;
         }
-        .service-item h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+        .btn-primary {
+            background-color: #000;
+            border: none;
+            color: #fff;
         }
-        .service-item p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .sub-services {
-            margin-top: 20px;
-        }
-        .sub-service {
-            margin-bottom: 15px;
-        }
-        .sub-service h5 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+        .btn-primary:hover {
+            background-color: #333;
         }
         /* Trades Section */
         .trades-section {
@@ -114,11 +106,6 @@
         .trade-card:hover {
             transform: translateY(-5px);
             border-color: #000;
-        }
-        .trade-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
         }
         .trade-card-body {
             padding: 20px;
@@ -163,11 +150,14 @@
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .page-title h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
+            .hero p {
+                font-size: 1rem;
+            }
         }
-
+        /* Service Cards */
         .service-card {
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -200,56 +190,13 @@
             margin-top: 20px;
             margin-bottom: 10px;
         }
-         /* Hero Section */
-         .hero {
-            background-image: url('morris-property-hero-4 (2).jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            height: 70vh;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            top: 50%;
-            
-            text-align: center;
-            padding: 0 15px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            text-shadow: 1px 1px 2px #000;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            color: #e0e0e0;
-        }
-        .btn-primary {
-            background-color: #000;
-            border: none;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background-color: #333;
-        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Morris Property Firm</a>
+            <a class="navbar-brand" href="index.html">Morris Property Firm (MPF)</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -272,41 +219,53 @@
         </div>
     </nav>
 
-    <!-- Page Title -->
+    <!-- Hero Section -->
     <section class="hero d-flex align-items-center">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content text-white">
                 <h1>Property Restoration Services</h1>
-                <p>Your Trusted Partner for Repairs and Maintenance Solutions</p>
+                <p>Don't have the time or connections to organise repairs? Let MPF handle everything for you.</p>
                 <a href="contact.html" class="btn btn-primary mt-4">Get in Touch</a>
             </div>
         </div>
     </section>
-    
+
+    <!-- Introduction -->
+    <section class="py-5">
+        <div class="container">
+            <p class="lead text-center">
+                At <strong>Morris Property Firm (MPF)</strong>, we understand that managing property repairs and maintenance can be overwhelming. That's why we organise everything for you, leveraging our network of trusted professionals. Whether you need restoration, repairs, or regular maintenance, MPF is your single point of contact for all property services in Bangor and across North Wales.
+            </p>
+        </div>
+    </section>
 
     <!-- Our Trades -->
     <section class="trades-section">
         <div class="container">
-            <h2 class="text-center mb-5">Our Trades Services</h2>
+            <h2 class="text-center mb-5">Our Comprehensive Services</h2>
             <p class="text-center mb-5">
-                We offer a full spectrum of trades services to cover all aspects of property care. Our skilled tradespeople are experts in their fields, ensuring top-quality workmanship and satisfaction.
+                MPF offers a full spectrum of trades services to cover every aspect of your property care. Our skilled tradespeople are experts in their fields, ensuring top-quality workmanship and complete satisfaction.
             </p>
             <div class="row g-4">
                 <!-- Plumbing -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                      
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-bucket-fill" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Plumbing Services</h5>
-                            <p>Expert plumbing services in Bangor and North Wales to ensure your systems run smoothly.</p>
+                            <p>Expert plumbing services to ensure your systems run smoothly.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Electrical -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                        
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-lightning" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Electrical Services</h5>
                             <p>Certified electricians handling all your electrical needs safely and efficiently.</p>
@@ -315,28 +274,34 @@
                 </div>
                 <!-- Carpentry -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                      
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-hammer" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Carpentry Services</h5>
-                            <p>Skilled carpenters providing quality woodwork and custom solutions for your property.</p>
+                            <p>Skilled carpenters providing quality woodwork and custom solutions.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Painting -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                      
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-brush" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Painting Services</h5>
-                            <p>Professional painting services to refresh and revitalize your property's appearance.</p>
+                            <p>Professional painting services to refresh your property's appearance.</p>
                         </div>
                     </div>
                 </div>
                 <!-- HVAC -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                       
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-thermometer" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>HVAC Services</h5>
                             <p>Heating, ventilation, and air conditioning maintenance for optimal comfort.</p>
@@ -345,8 +310,10 @@
                 </div>
                 <!-- Roofing -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                       
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-house" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Roofing Services</h5>
                             <p>Reliable roofing services to protect your property from the elements.</p>
@@ -355,18 +322,22 @@
                 </div>
                 <!-- Flooring -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                       
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-grid-1x2" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Flooring Installation</h5>
-                            <p>Installation and repair of various flooring types to enhance your property's interior.</p>
+                            <p>Installation and repair of various flooring types to enhance your property.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Gardening -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                       
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-flower1" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Gardening Services</h5>
                             <p>Comprehensive gardening and outdoor maintenance to keep your property beautiful.</p>
@@ -375,8 +346,10 @@
                 </div>
                 <!-- Masonry -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                        
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-bricks" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Masonry Services</h5>
                             <p>Expert masonry work for structural integrity and aesthetic appeal.</p>
@@ -385,8 +358,10 @@
                 </div>
                 <!-- Plastering -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                      
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-building" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Plastering Services</h5>
                             <p>Smooth and durable plastering solutions for walls and ceilings.</p>
@@ -395,8 +370,10 @@
                 </div>
                 <!-- Tiling -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                    
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-grid-3x3" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Tiling Services</h5>
                             <p>Professional tiling for kitchens, bathrooms, and floors.</p>
@@ -405,8 +382,10 @@
                 </div>
                 <!-- Landscaping -->
                 <div class="col-md-4">
-                    <div class="trade-card">
-                      
+                    <div class="trade-card text-center">
+                        <div class="trade-icon">
+                            <i class="bi bi-tree" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                        </div>
                         <div class="trade-card-body">
                             <h5>Landscaping Services</h5>
                             <p>Transform your outdoor spaces with our expert landscaping services.</p>
@@ -416,57 +395,56 @@
             </div>
         </div>
     </section>
-        <!-- Services Section -->
-        <section class="services-section py-4">
-            <div class="container">
-                <div class="row g-4">
-                    <!-- Service 1: Property Restoration -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <img src="621d28bb92a9c1000165eb62 (2).jpg" alt="Property Restoration in Bangor, North Wales">
-                            <div class="service-card-body">
-                                <h3>Property Restoration</h3>
-                                <p>Revitalize your property with our comprehensive restoration services. Whether it's updating your space or repairing worn-out elements, our team ensures meticulous attention to detail.</p>
-                                <h5>Modern Restoration</h5>
-                                <p>Enhance your property with modern designs and functionalities without compromising its original charm.</p>
-                                <h5>Structural Repairs</h5>
-                                <p>Ensure the integrity of your property with our expert structural repair services.</p>
-                            </div>
+
+    <!-- Services Overview -->
+    <section class="services-section py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Service 1: Property Restoration -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="621d28bb92a9c1000165eb62 (2).jpg" alt="Property Restoration in Bangor, North Wales">
+                        <div class="service-card-body">
+                            <h3>Property Restoration</h3>
+                            <p>Revitalize your property with our comprehensive restoration services. MPF handles everything from planning to execution, ensuring minimal hassle for you.</p>
+                            <h5>Modern Restoration</h5>
+                            <p>Enhance your property with modern designs and functionalities without compromising its original charm.</p>
+                            <h5>Structural Repairs</h5>
+                            <p>Ensure the integrity of your property with our expert structural repair services.</p>
                         </div>
                     </div>
-                    <!-- Service 2: Repairs -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <img src="an-electrician-fixing-a-socket.jpg" alt="Property Repairs in North Wales">
-                            <div class="service-card-body">
-                                <h3>Repairs</h3>
-                                <p>From minor fixes to major repairs, we handle all aspects of property maintenance to keep your home or business running smoothly.</p>
-                                <h5>Emergency Repairs</h5>
-                                <p>Prompt and efficient solutions for urgent repair needs, minimizing downtime and preventing further damage.</p>
-                                <h5>General Repairs</h5>
-                                <p>Comprehensive repair services addressing a wide range of property issues to maintain functionality and safety.</p>
-                            </div>
+                </div>
+                <!-- Service 2: Repairs -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="an-electrician-fixing-a-socket.jpg" alt="Property Repairs in North Wales">
+                        <div class="service-card-body">
+                            <h3>Repairs</h3>
+                            <p>From minor fixes to major repairs, MPF coordinates all aspects of property maintenance to keep your home or business running smoothly.</p>
+                            <h5>Emergency Repairs</h5>
+                            <p>Prompt and efficient solutions for urgent repair needs, minimizing downtime and preventing further damage.</p>
+                            <h5>General Repairs</h5>
+                            <p>Comprehensive repair services addressing a wide range of property issues to maintain functionality and safety.</p>
                         </div>
                     </div>
-                    <!-- Service 3: Maintenance -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <img src="621d1dcc92a9c1000165006b (2).jpg" alt="Property Maintenance in Bangor">
-                            <div class="service-card-body">
-                                <h3>Maintenance</h3>
-                                <p>Regular maintenance services to ensure your property remains in excellent condition, preventing costly repairs down the line.</p>
-                                <h5>Scheduled Maintenance</h5>
-                                <p>Routine inspections and upkeep tasks scheduled at your convenience to keep your property in top shape.</p>
-                                <h5>After Tenancy Maintenance</h5>
-                                <p>Thorough maintenance services to prepare properties for new tenants, ensuring cleanliness and functionality.</p>
-                            </div>
+                </div>
+                <!-- Service 3: Maintenance -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="621d1dcc92a9c1000165006b (2).jpg" alt="Property Maintenance in Bangor">
+                        <div class="service-card-body">
+                            <h3>Maintenance</h3>
+                            <p>Regular maintenance services to ensure your property remains in excellent condition. MPF schedules and manages all maintenance tasks, so you don't have to worry.</p>
+                            <h5>Scheduled Maintenance</h5>
+                            <p>Routine inspections and upkeep tasks scheduled at your convenience to keep your property in top shape.</p>
+                            <h5>After Tenancy Maintenance</h5>
+                            <p>Thorough maintenance services to prepare properties for new tenants, ensuring cleanliness and functionality.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    
-
+        </div>
+    </section>
 
     <!-- Process Overview -->
     <section class="content-section">
@@ -476,32 +454,32 @@
                 <!-- Step 1 -->
                 <div class="col-md-4 process-step">
                     <h5><i class="bi bi-chat-left-text me-2"></i>Consultation</h5>
-                    <p>Understand your property needs and goals.</p>
+                    <p>We discuss your property needs and objectives.</p>
                 </div>
                 <!-- Step 2 -->
                 <div class="col-md-4 process-step">
                     <h5><i class="bi bi-search me-2"></i>Assessment</h5>
-                    <p>Detailed evaluation of the property condition.</p>
+                    <p>MPF conducts a detailed evaluation of your property.</p>
                 </div>
                 <!-- Step 3 -->
                 <div class="col-md-4 process-step">
                     <h5><i class="bi bi-file-earmark-text me-2"></i>Proposal</h5>
-                    <p>Customized plan outlining the scope of work.</p>
+                    <p>We provide a customised plan outlining the scope of work.</p>
                 </div>
                 <!-- Step 4 -->
                 <div class="col-md-4 process-step">
-                    <h5><i class="bi bi-tools me-2"></i>Execution</h5>
-                    <p>Professional implementation of the agreed services.</p>
+                    <h5><i class="bi bi-people me-2"></i>Coordination</h5>
+                    <p>MPF organises and schedules all necessary tradespeople.</p>
                 </div>
                 <!-- Step 5 -->
                 <div class="col-md-4 process-step">
-                    <h5><i class="bi bi-check-circle me-2"></i>Completion</h5>
-                    <p>Final review to ensure satisfaction and quality.</p>
+                    <h5><i class="bi bi-tools me-2"></i>Execution</h5>
+                    <p>Our trusted team carries out the work efficiently.</p>
                 </div>
                 <!-- Step 6 -->
                 <div class="col-md-4 process-step">
-                    <h5><i class="bi bi-heart me-2"></i>Aftercare</h5>
-                    <p>Ongoing support and maintenance for lasting results.</p>
+                    <h5><i class="bi bi-check-circle me-2"></i>Completion</h5>
+                    <p>We ensure everything is completed to your satisfaction.</p>
                 </div>
             </div>
         </div>
@@ -516,12 +494,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="faqHeading1">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-                            What areas do you serve?
+                            How does MPF organise services for me?
                         </button>
                     </h2>
                     <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            We primarily serve North Wales, including Bangor, Conwy, Llandudno, and surrounding areas.
+                            MPF acts as your single point of contact, coordinating all trades and services needed for your project. We manage scheduling, communication, and quality control, saving you time and effort.
                         </div>
                     </div>
                 </div>
@@ -529,12 +507,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="faqHeading2">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                            How do you ensure quality in your services?
+                            Do I need to find my own tradespeople?
                         </button>
                     </h2>
                     <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            We work with reputable tradespeople and use high-quality materials to deliver exceptional results.
+                            No, MPF has a network of trusted and certified tradespeople. We select the right professionals for your specific needs, ensuring high-quality results.
                         </div>
                     </div>
                 </div>
@@ -542,52 +520,39 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="faqHeading3">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                            What is the typical timeline for a restoration project?
+                            Can MPF handle multiple projects simultaneously?
                         </button>
                     </h2>
                     <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Timelines vary based on the project's scope, but we strive to complete all work efficiently without compromising quality.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                            Do you offer after tenancy maintenance services?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, we provide comprehensive after tenancy maintenance to prepare properties for new tenants.
+                            Yes, we are equipped to manage multiple projects, ensuring each receives dedicated attention and resources through our organised approach.
                         </div>
                     </div>
                 </div>
                 <!-- Additional FAQs -->
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            What if I have specific preferences for materials or designs?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We welcome your input and will incorporate your preferences into the project plan. Our goal is to achieve results that align with your vision.
+                        </div>
+                    </div>
+                </div>
                 <!-- FAQ 5 -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="faqHeading5">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                            Are your tradespeople certified?
+                            How do I get started with MPF?
                         </button>
                     </h2>
                     <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Yes, all our tradespeople are fully certified and experienced in their respective fields.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 6 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading6">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                            How can I get a quote for my project?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You can contact us via phone or email to schedule a consultation, and we'll provide a detailed quote.
+                            Simply contact us via phone or email to schedule a consultation. We'll discuss your needs and begin organising the services required for your project.
                         </div>
                     </div>
                 </div>
@@ -598,14 +563,14 @@
     <!-- Call to Action -->
     <section class="py-5 text-center" style="background-color: #000; color: #fff;">
         <div class="container">
-            <h2>Need Our Services?</h2>
-            <p>Contact Morris Property Firm today to discuss your property needs.</p>
+            <h2>Ready to Let MPF Organise Everything?</h2>
+            <p>Contact us today to discuss your property needs, and experience hassle-free property management.</p>
             <a href="contact.html" class="btn btn-light mt-3">Get in Touch</a>
         </div>
     </section>
 
-     <!-- Footer -->
-     <footer class="footer text-center">
+    <!-- Footer -->
+    <footer class="footer text-center">
         <div class="container">
             <p>
                 Phone: <a href="tel:+447814001947">+44 7814 001947</a> | Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>
@@ -616,7 +581,7 @@
             </p>
             <!-- Social Media Links -->
             <p class="social-icons">
-                <a href="https://www.facebook.com/YourFacebookPage" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             </p>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
@@ -647,7 +612,7 @@
                 <div class="modal-body">
                     <h4>Introduction</h4>
                     <p>
-                        We at Morris Property Firm are committed to protecting your
+                        We at Morris Property Firm (MPF) are committed to protecting your
                         privacy. This Privacy Policy explains how we collect, use, and
                         share your personal data when you use our website.
                     </p>
@@ -659,7 +624,7 @@
                     </p>
                     <h4>Use of Data</h4>
                     <p>
-                        We use your personal data to respond to your inquiries, provide
+                        We use your personal data to respond to your enquiries, provide
                         our services, and improve our website. We may also use your data
                         for marketing purposes, with your consent.
                     </p>
@@ -700,7 +665,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS and dependencies (if needed) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
