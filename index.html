@@ -9,17 +9,20 @@
     <meta name="description" content="Morris Property Firm (MPF) offers expert property restoration, repairs, and maintenance services in Bangor and across North Wales. Your trusted local partner for all property needs.">
     <!-- Meta Keywords for SEO -->
     <meta name="keywords" content="Property Restoration Bangor, Property Repairs North Wales, Property Maintenance Bangor, Morris Property Firm, MPF, Bangor Property Services, North Wales Property Maintenance, Local Property Restoration, Bangor Property Repairs, Property Services North Wales">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dsedezvzs/image/upload/v1734335602/morris-property-logo_t2z3ow.png" alt="morris-property-logo">
+    <link rel="icon" type="image/webp" href="images/morris-property-logo.webp" alt="Morris Property Firm Logo">
+    
     <!-- Custom CSS -->
     <style>
         /* Custom styles */
@@ -35,27 +38,38 @@
         }
         /* Header */
         .navbar {
-            background-color: #fff;
-            border-bottom: 1px solid #ccc;
+            background-color: #FFA500;
+            padding: 1rem 0;
+            z-index: 1000;
         }
         .navbar-brand {
             font-weight: bold;
-            color: #000;
+            color: #fff;
+            font-size: 1.8rem; /* Increased font size */
         }
         .navbar-nav .nav-link {
-            color: #000;
+            color: #fff;
+            font-size: 1.2rem; /* Increased font size */
+            transition: color 0.3s;
         }
-        .navbar-nav .nav-link.active {
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            color: #000;
             text-decoration: underline;
         }
         /* Hero Section */
         .hero {
-            background-image: url('hero-1.jpg');
+            background-image: url('images/carpet-flooring-5.jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
-            height: 70vh;
+            height: 80vh;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
         }
         .hero-overlay {
             background-color: rgba(0, 0, 0, 0.6);
@@ -64,107 +78,328 @@
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 1;
         }
         .hero-content {
             position: relative;
             z-index: 2;
-            top: 50%;
-            
-            text-align: center;
             padding: 0 15px;
         }
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: #fff;
-            text-shadow: 1px 1px 2px #000;
+            text-shadow: 2px 2px 4px #000;
+            opacity: 0;
+            transform: translateY(-50px);
         }
         .hero p {
             font-size: 1.5rem;
             color: #e0e0e0;
+            opacity: 0;
+            transform: translateY(50px);
         }
         .btn-primary {
-            background-color: #000;
+            background-color: #FFA500; /* Changed to orange */
             border: none;
             color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: scale(0.8);
         }
         .btn-primary:hover {
-            background-color: #333;
+            background-color: #e69500;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
-        /* Trades Section */
-        .trade-icon {
-            font-size: 3rem;
-            color: #000;
-            margin-bottom: 1rem;
-        }
-        .trade-card {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.2s;
-        }
-        .trade-card:hover {
-            transform: translateY(-5px);
-            border-color: #000;
-        }
-        /* Service Areas */
-        .service-areas {
-            background-color: #f9f9f9;
+        /* Introduction Section */
+        .introduction {
             padding: 50px 0;
+            background-color: #f9f9f9;
         }
-        .service-areas h2 {
-            margin-bottom: 30px;
-        }
-        .service-area-card {
-            background-color: #fff;
-            border: 1px solid #ccc;
+        .introduction img {
+            max-height: 600px;
+            width: 100%;
+            object-fit: cover;
             border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Our Trusted Team */
+        .trusted-team {
+            padding: 50px 0;
             text-align: center;
-        }
-        .service-area-card h5 {
-            margin-bottom: 10px;
-        }
-        /* Testimonials */
-        .testimonial {
             background-color: #fff;
-            border-left: 4px solid #000;
-            padding: 20px;
-            margin-bottom: 20px;
         }
-        .testimonial blockquote {
-            margin: 0;
+        .trusted-team h2 {
+            margin-bottom: 30px;
+            color: #FFA500;
+        }
+        .trusted-team p {
             font-size: 1.1rem;
-            font-style: italic;
+            color: #555;
+        }
+        /* Comprehensive Property Services */
+        .services {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFA500;
+        }
+        .service-card {
+            background-color: #fff;
+            border: 2px solid #FFA500;
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .service-header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .service-body {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .service-body .service-icon {
+            font-size: 2rem;
+            color: #FFA500;
+            margin-right: 15px;
+        }
+        .service-body h5 {
+            margin: 0;
             color: #333;
         }
-        .testimonial footer {
+        .service-body p {
+            margin-top: 10px;
+            color: #666;
+        }
+        /* Service Areas Section */
+        .service-areas {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+        .service-areas h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFA500;
+        }
+        .areas-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .areas-list li {
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 2px solid #FFA500;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .areas-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .areas-list li h5 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .areas-list li p {
+            color: #666;
+        }
+        /* Why Choose Us - Swiper Carousel */
+        .why-choose {
+            padding: 50px 0;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        .why-choose h2 {
+            margin-bottom: 40px;
+            color: #FFA500;
+        }
+        .why-choose .swiper-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+        .why-choose .swiper-slide {
+            background-color: #fff;
+            border: 2px solid #FFA500;
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        .why-choose .swiper-slide:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .why-choose .swiper-slide .bi {
+            font-size: 3rem;
+            color: #FFA500;
+            margin-bottom: 20px;
+        }
+        .why-choose .swiper-slide h5 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .why-choose .swiper-slide p {
+            color: #666;
+        }
+        /* Testimonials - Swiper Carousel */
+        .testimonials {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFA500;
+        }
+        .testimonials .swiper-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+        .testimonials .swiper-slide {
+            background-color: #fff;
+            border-left: 5px solid #FFA500;
+            padding: 20px;
+            transition: background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .testimonials .swiper-slide:hover {
+            background-color: #f0f0f0;
+        }
+        .testimonials .testimonial-item blockquote {
+            margin: 0;
+            font-style: italic;
+            color: #555;
+        }
+        .testimonials .testimonial-item footer {
             margin-top: 10px;
             font-size: 0.9rem;
-            color: #555;
+            color: #333;
+        }
+        /* Call to Action */
+        .cta {
+            background-color: #FFA500;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta .btn {
+            background-color: #fff;
+            color: #FFA500;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .cta .btn:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
         }
         /* Footer */
         .footer {
             background-color: #000;
             color: #fff;
-            padding: 2rem 0;
+            padding: 30px 0;
+            text-align: center;
         }
         .footer a {
-            color: #fff;
+            color: #FFA500;
             text-decoration: none;
+            transition: color 0.3s;
         }
         .footer a:hover {
+            color: #e69500;
             text-decoration: underline;
+        }
+        .footer .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .footer .social-icons a:hover {
+            color: #FFA500;
+        }
+        /* Privacy Policy Modal */
+        .modal-header.bg-dark {
+            background-color: #000 !important;
+        }
+        .modal-header.text-white {
+            color: #fff !important;
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .navbar-nav .nav-link {
+                font-size: 1rem;
+            }
             .hero h1 {
                 font-size: 2rem;
             }
             .hero p {
                 font-size: 1rem;
+            }
+            .service-body .service-icon {
+                font-size: 1.5rem;
+            }
+            .areas-list li {
+                width: 100%;
+            }
+            .why-choose .swiper-slide {
+                padding: 20px;
+            }
+            .testimonials .swiper-slide {
+                padding: 15px;
             }
         }
     </style>
@@ -173,29 +408,60 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1734335602/morris-property-logo_t2z3ow.png" 
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/morris-property-logo.webp" 
                      alt="Morris Property Firm Logo" 
-                     class="navbar-logo" 
-                     style="height: 60px; margin-right: 10px;">
-                Morris Property Firm 
+                     class="navbar-logo me-2" 
+                     style="height: 60px;">
+                Morris Property Firm
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-           <div class="collapse navbar-collapse" id="navbarNav">
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
                <ul class="navbar-nav ms-auto">
                    <li class="nav-item">
-                       <a class="nav-link active" href="#">Home</a>
+                       <a class="nav-link active" href="index.html">Home</a>
+                   </li>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Services
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                           <li><a class="dropdown-item" href="carpet-flooring.html">Carpet and Flooring</a></li>
+                           <li><a class="dropdown-item" href="bathroom-fitting.html">Bathroom Fitting</a></li>
+                           <li><a class="dropdown-item" href="luxury-kitchens.html">Luxury Kitchens</a></li>
+                           <li><a class="dropdown-item" href="electrician.html">Electrical Services</a></li>
+                           <li><a class="dropdown-item" href="roofing.html">Roofing Services</a></li>
+                           <li><a class="dropdown-item" href="joinery-carpentry.html">Joinery Carpentry</a></li>
+                           <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
+                           <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
+                           <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
+                           <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
+                           <li><a class="dropdown-item" href="wood-work.html">Wood Work</a></li>
+                       </ul>
                    </li>
                    <li class="nav-item">
                        <a class="nav-link" href="about.html">About</a>
                    </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="services.html">Services</a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="contact.html">Contact</a>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Contact
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                           <li><a class="dropdown-item" href="contact-general.html">General Contact</a></li>
+                           <li><a class="dropdown-item" href="contact-carpet-flooring.html">Carpet and Flooring</a></li>
+                           <li><a class="dropdown-item" href="contact-bathroom-fitting.html">Bathroom Fitting</a></li>
+                           <li><a class="dropdown-item" href="contact-luxury-kitchens.html">Luxury Kitchens</a></li>
+                           <li><a class="dropdown-item" href="contact-electrician.html">Electrical Services</a></li>
+                           <li><a class="dropdown-item" href="contact-roofing.html">Roofing Services</a></li>
+                           <li><a class="dropdown-item" href="contact-joinery-carpentry.html">Joinery Carpentry</a></li>
+                           <li><a class="dropdown-item" href="contact-painting.html">Painting Services</a></li>
+                           <li><a class="dropdown-item" href="contact-windows-doors.html">Windows and Doors</a></li>
+                           <li><a class="dropdown-item" href="contact-ground-work.html">Ground Work</a></li>
+                           <li><a class="dropdown-item" href="contact-builder.html">Builder Services</a></li>
+                           <li><a class="dropdown-item" href="contact-wood-work.html">Wood Work</a></li>
+                       </ul>
                    </li>
                </ul>
            </div>
@@ -203,378 +469,616 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero d-flex align-items-center">
+    <section class="hero d-flex align-items-center" id="heroSection">
         <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content d-flex-column justify-content-center align-items-center text-white pt-5 mt-5">
+            <div class="hero-content">
                 <h1>Expert Property Restoration in Bangor, North Wales</h1>
                 <p>Don't have the time or connections to organise repairs? Let MPF handle it for you.</p>
-                <a href="services.html" class="btn btn-primary mt-4">Discover Our Services</a>
+                <a href="services.html" class="btn btn-primary">Discover Our Services</a>
             </div>
         </div>
     </section>
 
-    <!-- Introduction -->
-    <section class="py-5">
+    <!-- Introduction Section -->
+    <section class="introduction">
         <div class="container">
-            <p class="lead text-center">
-                Welcome to <strong>Morris Property Firm (MPF)</strong> – Your local experts in organising all your property repairs and maintenance services in <strong>Bangor</strong> and across <strong>North Wales</strong>. At MPF, we understand the challenges of finding trusted tradespeople and coordinating property maintenance. That's why we leverage our network of trusted professionals to handle everything for you. Based in Bangor, our dedicated team ensures your property remains in top condition with reliable and high-quality workmanship.
-            </p>
-        </div>
-        <div class="d-flex justify-content-center align-items-center mx-auto">
-            <!-- Placeholder for Founder's Image -->
-            <img src="morris-property-logo.png" alt="Robin Morris - Founder of Morris Property Firm" class="founder-img img-fluid border rounded" style="max-height: 600px;">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <p class="lead">
+                        Welcome to <strong>Morris Property Firm (MPF)</strong> – Your local experts in organising all your property repairs and maintenance services in <strong>Bangor</strong> and across <strong>North Wales</strong>. At MPF, we understand the challenges of finding trusted tradespeople and coordinating property maintenance. That's why we leverage our network of trusted professionals to handle everything for you. Based in Bangor, our dedicated team ensures your property remains in top condition with reliable and high-quality workmanship.
+                    </p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="images/morris-property-firm-1.jpg" alt="Robin Morris - Founder of Morris Property Firm" class="img-fluid rounded shadow">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Our Trusted Team -->
-    <section class="py-5 bg-light">
+    <!-- Our Trusted Team Section -->
+    <section class="trusted-team">
         <div class="container">
-            <h2 class="text-center mb-5">Our Trusted Team</h2>
-            <p class="lead text-center">
+            <h2>Our Trusted Team</h2>
+            <p class="lead">
                 MPF has built strong relationships with a network of reliable and skilled tradespeople across North Wales. Our trusted team includes experts in plumbing, electrical work, carpentry, and more. We coordinate all aspects of your property maintenance, ensuring every job is completed to the highest standard.
             </p>
         </div>
     </section>
 
-    <!-- Our Trades -->
-    <section class="py-5">
+    <!-- Comprehensive Property Services Section -->
+    <section class="services">
         <div class="container">
-            <h2 class="text-center mb-5">Comprehensive Property Services</h2>
-            <div class="row g-4">
-                <!-- Plumbing -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-bucket-fill"></i>
+            <h2>Comprehensive Property Services</h2>
+            <div class="row d-flex justify-content-center align-items-center g-4">
+                <!-- Carpet and Flooring -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <a href="carpet-flooring.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/carpet-flooring-1.jpg" alt="Carpet and Flooring Services" class="img-fluid">
                         </div>
-                        <h5>Plumbing Services</h5>
-                        <p>Expert plumbing services to ensure your systems run smoothly.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-grid-1x2 service-icon"></i>
+                            <h5>Carpet and Flooring</h5>
+                        </div>
+                        <p>Enhance the beauty and functionality of your property with our expert carpet and flooring solutions.</p>
+                    </a>
                 </div>
-                <!-- Electrical -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-lightning"></i>
+                <!-- Bathroom Fitting -->
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="bathroom-fitting.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/plumbing-bathroom-fitting-1.jpg" alt="Bathroom Fitting Services" class="img-fluid">
                         </div>
-                        <h5>Electrical Services</h5>
-                        <p>Certified electricians handling all your electrical needs.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-bucket-fill service-icon"></i>
+                            <h5>Bathroom Fitting</h5>
+                        </div>
+                        <p>Transform your bathroom into a luxurious and functional space with our expert fitting services.</p>
+                    </a>
                 </div>
-                <!-- Carpentry -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-hammer"></i>
+                <!-- Luxury Kitchens -->
+                <div class="col-md-4" data-aos="flip-right" data-aos-delay="300">
+                    <a href="luxury-kitchens.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/luxury-kitchen-1.jpg" alt="Luxury Kitchen Services" class="img-fluid">
                         </div>
-                        <h5>Carpentry Services</h5>
-                        <p>Skilled carpenters for quality woodwork and repairs.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-kitchen service-icon"></i>
+                            <h5>Luxury Kitchens</h5>
+                        </div>
+                        <p>Elevate your kitchen with bespoke cabinetry and high-end appliances for a stunning and functional space.</p>
+                    </a>
                 </div>
-                <!-- Painting -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-brush"></i>
+                <!-- Electrical Services -->
+                <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="400">
+                    <a href="electrician.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/electrician-1.jpg" alt="Electrical Services" class="img-fluid">
                         </div>
-                        <h5>Painting Services</h5>
-                        <p>Professional painting services to refresh your space.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-lightning-fill service-icon"></i>
+                            <h5>Electrical Services</h5>
+                        </div>
+                        <p>Certified electricians handling all your electrical needs with precision and reliability.</p>
+                    </a>
                 </div>
-                <!-- HVAC -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-thermometer"></i>
+                <!-- Roofing Services -->
+                <div class="col-md-4" data-aos="flip-up" data-aos-delay="500">
+                    <a href="roofing.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/roofing-1.jpg" alt="Roofing Services" class="img-fluid">
                         </div>
-                        <h5>HVAC Maintenance</h5>
-                        <p>Heating, ventilation, and air conditioning maintenance services.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-house service-icon"></i>
+                            <h5>Roofing Services</h5>
+                        </div>
+                        <p>Reliable roofing services to protect your property with high-quality materials and workmanship.</p>
+                    </a>
                 </div>
-                <!-- Roofing -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-house"></i>
+                <!-- Joinery Carpentry -->
+                <div class="col-md-4" data-aos="zoom-in-down" data-aos-delay="600">
+                    <a href="joinery-carpentry.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/joinery-carpentry-1.jpg" alt="Joinery Carpentry Services" class="img-fluid">
                         </div>
-                        <h5>Roofing Services</h5>
-                        <p>Reliable roofing services to protect your property.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-hammer service-icon"></i>
+                            <h5>Joinery Carpentry</h5>
+                        </div>
+                        <p>Skilled carpenters delivering custom woodwork and repairs to enhance your property.</p>
+                    </a>
                 </div>
-                <!-- Flooring -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-grid-1x2"></i>
+                <!-- Painting Services -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="700">
+                    <a href="painting.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/painting-1.jpg" alt="Painting Services" class="img-fluid">
                         </div>
-                        <h5>Flooring Installation</h5>
-                        <p>Installation and repair of various flooring types.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-brush service-icon"></i>
+                            <h5>Painting Services</h5>
+                        </div>
+                        <p>Professional painting services to refresh and revitalize your living spaces.</p>
+                    </a>
                 </div>
-                <!-- Gardening -->
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <div class="trade-card text-center">
-                        <div class="trade-icon">
-                            <i class="bi bi-flower1"></i>
+                <!-- Windows and Doors -->
+                <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="800">
+                    <a href="windows-doors.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/windows-1.jpg" alt="Windows and Doors Services" class="img-fluid">
                         </div>
-                        <h5>Gardening Services</h5>
-                        <p>Comprehensive gardening and outdoor maintenance.</p>
-                    </div>
+                        <div class="service-body">
+                            <i class="bi bi-window service-icon"></i>
+                            <h5>Windows and Doors</h5>
+                        </div>
+                        <p>Upgrade your property with our quality window and door installation and repair services.</p>
+                    </a>
+                </div>
+                <!-- Ground Work -->
+                <div class="col-md-4" data-aos="flip-right" data-aos-delay="900">
+                    <a href="ground-work.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/ground-work-1.jpg" alt="Ground Work Services" class="img-fluid">
+                        </div>
+                        <div class="service-body">
+                            <i class="bi bi-geo-alt-fill service-icon"></i>
+                            <h5>Ground Work</h5>
+                        </div>
+                        <p>Comprehensive ground work services to prepare and maintain your property foundation.</p>
+                    </a>
+                </div>
+                <!-- Builder Services -->
+                <div class="col-md-4" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <a href="builder.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/builder-1.jpg" alt="Builder Services" class="img-fluid">
+                        </div>
+                        <div class="service-body">
+                            <i class="bi bi-building service-icon"></i>
+                            <h5>Builder Services</h5>
+                        </div>
+                        <p>Expert builder services for new constructions and extensive property renovations.</p>
+                    </a>
+                </div>
+                <!-- Wood Work -->
+                <div class="col-md-4" data-aos="flip-up" data-aos-delay="1100">
+                    <a href="wood-work.html" class="service-card">
+                        <div class="service-header">
+                            <img src="images/woodwork-1.jpg" alt="Wood Work Services" class="img-fluid">
+                        </div>
+                        <div class="service-body">
+                            <i class="bi bi-tree-fill service-icon"></i>
+                            <h5>Wood Work</h5>
+                        </div>
+                        <p>High-quality wood work services to enhance the aesthetics and functionality of your property.</p>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Areas -->
-    <section class="service-areas">
-        <div class="container">
-            <h2 class="text-center">Serving Bangor and All Areas Across North Wales</h2>
-            <div class="row mt-5">
-                <!-- Area 1 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Bangor</h5>
-                        <p>Our home base, offering all services locally.</p>
-                    </div>
-                </div>
-                <!-- Area 2 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Colwyn Bay</h5>
-                        <p>Providing expert property services to Colwyn Bay residents.</p>
-                    </div>
-                </div>
-                <!-- Area 3 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Llandudno</h5>
-                        <p>Serving Llandudno with quality restoration and repairs.</p>
-                    </div>
-                </div>
-                <!-- Area 4 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Holyhead</h5>
-                        <p>Comprehensive property maintenance in Holyhead.</p>
-                    </div>
-                </div>
-                <!-- Area 5 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Rhyl</h5>
-                        <p>Expert services for homeowners and landlords in Rhyl.</p>
-                    </div>
-                </div>
-                <!-- Area 6 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Flint</h5>
-                        <p>Reliable property solutions in Flint and surrounding areas.</p>
-                    </div>
-                </div>
-                <!-- Area 7 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Wrexham</h5>
-                        <p>Professional property services available in Wrexham.</p>
-                    </div>
-                </div>
-                <!-- Area 8 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Conwy</h5>
-                        <p>Serving Conwy with top-notch property maintenance.</p>
-                    </div>
-                </div>
-                <!-- Area 9 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Caernarfon</h5>
-                        <p>Your trusted partner for property care in Caernarfon.</p>
-                    </div>
-                </div>
-                <!-- Area 10 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
-                        <h5>Abergele</h5>
-                        <p>Comprehensive services for Abergele residents.</p>
-                    </div>
-                </div>
-                <!-- Area 11 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
+        <!-- Service Areas Section -->
+        <section class="service-areas">
+            <div class="container">
+                <h2>Areas We Service</h2>
+                <ul class="areas-list">
+                    <li data-aos="fade-up" data-aos-delay="100">
                         <h5>Anglesey</h5>
                         <p>Providing quality property services across Anglesey.</p>
-                    </div>
-                </div>
-                <!-- Area 12 -->
-                <div class="col-md-4">
-                    <div class="service-area-card">
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <h5>Gwynedd</h5>
+                        <p>Comprehensive property maintenance in Gwynedd.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <h5>Bangor</h5>
+                        <p>Your home base, offering all services locally.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <h5>Caernarfon</h5>
+                        <p>Your trusted partner for property care in Caernarfon.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <h5>Llandudno</h5>
+                        <p>Serving Llandudno with quality restoration and repairs.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <h5>Holyhead</h5>
+                        <p>Comprehensive property maintenance in Holyhead.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="700">
+                        <h5>Colwyn Bay</h5>
+                        <p>Providing expert property services to Colwyn Bay residents.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="800">
+                        <h5>Pwllheli</h5>
+                        <p>Reliable property solutions in Pwllheli.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="900">
+                        <h5>Barmouth</h5>
+                        <p>Professional property services available in Barmouth.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="1000">
+                        <h5>Y Felinheli</h5>
+                        <p>Trusted property maintenance in Y Felinheli.</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="1100">
                         <h5>Other Areas</h5>
                         <p>We serve all surrounding areas across North Wales.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section - Animated Swiper Carousel -->
+        <section class="why-choose">
+            <div class="container">
+                <h2>Why Choose MPF</h2>
+                <!-- Swiper Carousel -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide" style="height:300px">
+                            <i class="bi bi-people-fill"></i>
+                            <h5>Experienced Local Team</h5>
+                            <p>MPF's skilled professionals have extensive experience in all areas of property maintenance in Bangor.</p>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide" style="height:300px">
+                            <i class="bi bi-gear-fill"></i>
+                            <h5>Reputable Connections</h5>
+                            <p>With MPF, you benefit from our trusted partnerships with reliable tradespeople in North Wales.</p>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide" style="height:300px">
+                            <i class="bi bi-emoji-smile-fill"></i>
+                            <h5>Customer-Focused Approach</h5>
+                            <p>MPF provides personalised service tailored to meet your specific property needs.</p>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section - Swiper Carousel -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <blockquote>
+                                    “MPF transformed our home in Bangor with their outstanding restoration services. Highly recommended!”
+                                </blockquote>
+                                <footer>- John D., Bangor</footer>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <blockquote>
+                                    “MPF's reliable and professional team handled our after tenancy maintenance perfectly in North Wales.”
+                                </blockquote>
+                                <footer>- Sarah L., Colwyn Bay</footer>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <blockquote>
+                                    “From plumbing to electrical work, MPF coordinated everything seamlessly. Their network of trusted professionals made the entire process hassle-free.”
+                                </blockquote>
+                                <footer>- Michael T., Llandudno</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Transform Your Property?</h2>
+                <p>Contact MPF today for a free consultation.</p>
+                <a href="contact-general.html" class="btn">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>
+                </p>
+                <p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
+                </p>
+                <!-- Social Media Links -->
+                <div class="social-icons mb-3">
+                    <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+                <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
+                <p><a href="https://cleandesignuk.com/" target="_blank">Website Design By Clean Design UK</a></p>
+            </div>
+        </footer>
+
+        <!-- Privacy Policy Modal -->
+        <div
+            class="modal fade"
+            id="privacyPolicyModal"
+            tabindex="-1"
+            aria-labelledby="privacyPolicyModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title" id="privacyPolicyModalLabel">
+                            Privacy Policy
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Introduction</h4>
+                        <p>
+                            We at Morris Property Firm (MPF) are committed to protecting your
+                            privacy. This Privacy Policy explains how we collect, use, and
+                            share your personal data when you use our website.
+                        </p>
+                        <h4>Data Collection</h4>
+                        <p>
+                            We collect personal data that you provide to us, such as your
+                            name, email address, and phone number, when you contact us through
+                            our website or sign up for our services.
+                        </p>
+                        <h4>Use of Data</h4>
+                        <p>
+                            We use your personal data to respond to your enquiries, provide
+                            our services, and improve our website. We may also use your data
+                            for marketing purposes, with your consent.
+                        </p>
+                        <h4>Data Sharing</h4>
+                        <p>
+                            We do not share your personal data with third parties, except as
+                            required by law or with your consent.
+                        </p>
+                        <h4>Your Rights</h4>
+                        <p>
+                            You have the right to access, correct, and delete your personal
+                            data, as well as the right to object to or restrict our use of
+                            your data. To exercise these rights, please contact us at
+                            <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>.
+                        </p>
+                        <h4>GDPR Compliance</h4>
+                        <p>
+                            We comply with the General Data Protection Regulation (GDPR),
+                            which means we take steps to protect your personal data and
+                            respect your privacy rights.
+                        </p>
+                        <h4>Changes to this Policy</h4>
+                        <p>
+                            We may update this Privacy Policy from time to time. We will
+                            notify you of any changes by posting the new policy on our
+                            website.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Why Choose Us -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Why Choose MPF</h2>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <h5>Experienced Local Team</h5>
-                    <p>MPF's skilled professionals have extensive experience in all areas of property maintenance in Bangor.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Reputable Connections</h5>
-                    <p>With MPF, you benefit from our trusted partnerships with reliable tradespeople in North Wales, ensuring high-quality results.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Customer-Focused Approach</h5>
-                    <p>MPF provides personalised service tailored to meet your specific property needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Bootstrap JS, Swiper.js, GSAP, and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Swiper.js JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- GSAP JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script>
+            // Initialize Swiper Carousel for "Why Choose MPF"
+            const whyChooseSwiper = new Swiper('.why-choose .swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.why-choose .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.why-choose .swiper-button-next',
+                    prevEl: '.why-choose .swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 30,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
 
-    <!-- Testimonials -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">What Our Clients Say</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <blockquote>
-                            “MPF transformed our home in Bangor with their outstanding restoration services. Highly recommended!”
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <blockquote>
-                            “MPF's reliable and professional team handled our after tenancy maintenance perfectly in North Wales.”
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Initialize Swiper Carousel for Testimonials
+            const testimonialSwiper = new Swiper('.testimonials .swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 7000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.testimonials .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.testimonials .swiper-button-next',
+                    prevEl: '.testimonials .swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 30,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                },
+            });
 
-    <!-- Call to Action -->
-    <section class="py-5 text-center" style="background-color: #000; color: #fff;">
-        <div class="container">
-            <h2>Ready to Transform Your Property?</h2>
-            <p>Contact MPF today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-light mt-3">Get in Touch</a>
-        </div>
-    </section>
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
 
-   <!-- Footer -->
-   <footer class="footer text-center">
-    <div class="container">
-        <p>
-        Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>
-        </p>
-        <p>
-            <!-- Privacy Policy Trigger -->
-            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
-        </p>
-        <!-- Social Media Links -->
-        <p class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        </p>
-        <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
-        <a href="https://cleandesignuk.com/"> Website Design By Clean Design UK</a>
-    </div>
-    <div class="d-flex justify-content-center align-items-center mx-auto py-3">
-        <!-- Placeholder for Founder's Image -->
-        <img src="morris-property-logo.png" alt="Robin Morris - Founder of Morris Property Firm" class="founder-img img-fluid border rounded " style="max-height: 200px;">
-    </div>
-</footer>
+            // Hero Section Animations
+            gsap.to("#heroSection h1", {
+                duration: 1,
+                opacity: 1,
+                y: 0,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#heroSection h1",
+                    start: "top 80%",
+                }
+            });
 
-<!-- Privacy Policy Modal -->
-<div
-    class="modal fade"
-    id="privacyPolicyModal"
-    tabindex="-1"
-    aria-labelledby="privacyPolicyModalLabel"
-    aria-hidden="true"
->
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header bg-dark text-white">
-                <h5 class="modal-title" id="privacyPolicyModalLabel">
-                    Privacy Policy
-                </h5>
-                <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
-            </div>
-            <div class="modal-body">
-                <h4>Introduction</h4>
-                <p>
-                    We at Morris Property Firm (MPF) are committed to protecting your
-                    privacy. This Privacy Policy explains how we collect, use, and
-                    share your personal data when you use our website.
-                </p>
-                <h4>Data Collection</h4>
-                <p>
-                    We collect personal data that you provide to us, such as your
-                    name, email address, and phone number, when you contact us through
-                    our website or sign up for our services.
-                </p>
-                <h4>Use of Data</h4>
-                <p>
-                    We use your personal data to respond to your enquiries, provide
-                    our services, and improve our website. We may also use your data
-                    for marketing purposes, with your consent.
-                </p>
-                <h4>Data Sharing</h4>
-                <p>
-                    We do not share your personal data with third parties, except as
-                    required by law or with your consent.
-                </p>
-                <h4>Your Rights</h4>
-                <p>
-                    You have the right to access, correct, and delete your personal
-                    data, as well as the right to object to or restrict our use of
-                    your data. To exercise these rights, please contact us at
-                    <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>.
-                </p>
-                <h4>GDPR Compliance</h4>
-                <p>
-                    We comply with the General Data Protection Regulation (GDPR),
-                    which means we take steps to protect your personal data and
-                    respect your privacy rights.
-                </p>
-                <h4>Changes to this Policy</h4>
-                <p>
-                    We may update this Privacy Policy from time to time. We will
-                    notify you of any changes by posting the new policy on our
-                    website.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                >
-                    Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+            gsap.to("#heroSection p", {
+                duration: 1,
+                opacity: 1,
+                y: 0,
+                ease: "power2.out",
+                delay: 0.5,
+                scrollTrigger: {
+                    trigger: "#heroSection p",
+                    start: "top 80%",
+                }
+            });
 
-    <!-- Bootstrap JS and dependencies (if needed) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+            gsap.to("#heroSection .btn-primary", {
+                duration: 1,
+                opacity: 1,
+                scale: 1,
+                ease: "back.out(1.7)",
+                delay: 1,
+                scrollTrigger: {
+                    trigger: "#heroSection .btn-primary",
+                    start: "top 80%",
+                }
+            });
+
+            // Service Cards Animations
+            gsap.utils.toArray('.service-card').forEach((card, index) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    delay: index * 0.2,
+                    ease: "power2.out",
+                });
+            });
+
+            // Service Areas Animations
+            gsap.utils.toArray('.areas-list li').forEach((item, index) => {
+                gsap.from(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 0,
+                    y: 30,
+                    duration: 1,
+                    delay: index * 0.1,
+                    ease: "power2.out",
+                });
+            });
+
+            // "Why Choose MPF" Carousel Animations using GSAP
+            gsap.utils.toArray('.why-choose .swiper-slide').forEach((slide, index) => {
+                gsap.from(slide.querySelector('.bi'), {
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 1,
+                    delay: 0.2,
+                    ease: "power2.out",
+                });
+                gsap.from(slide.querySelector('h5'), {
+                    opacity: 0,
+                    y: 20,
+                    duration: 1,
+                    delay: 0.4,
+                    ease: "power2.out",
+                });
+                gsap.from(slide.querySelector('p'), {
+                    opacity: 0,
+                    y: 20,
+                    duration: 1,
+                    delay: 0.6,
+                    ease: "power2.out",
+                });
+            });
+
+            // Testimonials Animations
+            gsap.utils.toArray('.testimonials .swiper-slide').forEach((slide, index) => {
+                gsap.from(slide.querySelector('blockquote'), {
+                    opacity: 0,
+                    x: -50,
+                    duration: 1,
+                    delay: 0.2,
+                    ease: "power2.out",
+                });
+                gsap.from(slide.querySelector('footer'), {
+                    opacity: 0,
+                    x: -50,
+                    duration: 1,
+                    delay: 0.4,
+                    ease: "power2.out",
+                });
+            });
+
+            // CTA Button Animation
+            gsap.from(".cta .btn", {
+                scrollTrigger: {
+                    trigger: ".cta .btn",
+                    start: "top 80%",
+                },
+                opacity: 0,
+                scale: 0.8,
+                duration: 1,
+                ease: "back.out(1.7)",
+            });
+        </script>
+</body>
 </html>
