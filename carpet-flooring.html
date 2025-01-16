@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carpet and Flooring Services | Morris Property Firm (MPF)</title>
     <!-- Meta Description for SEO -->
-    <meta name="description" content="Transform your home with MPF's professional carpet and flooring services in Bangor and North Wales. Quality installation, maintenance, and repair by our expert team.">
+    <meta name="description" content="Enhance your home with MPF's professional carpet and flooring services in Bangor and North Wales. Expert installation, maintenance, and repair by our skilled team.">
     <!-- Meta Keywords for SEO -->
     <meta name="keywords" content="Carpet Flooring Bangor, Laminate Flooring, Vinyl Flooring, Wood Flooring, LVT Flooring, Carpet Installation, Flooring Repair, North Wales Flooring Services">
 
@@ -19,346 +19,417 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="images/morris-property-logo.webp" alt="Morris Property Firm Logo">
+    <link rel="icon" type="image/png" href="images/morris-property-logo.png" alt="Morris Property Firm Logo">
 
     <!-- Custom CSS -->
     <style>
-        /* General Styles */
-        body {
-            background-color: #fff;
-            color: #333;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4, h5, h6, li > a, a {
-            font-family: "Bebas Neue", sans-serif !important;
-            font-weight: 700 !important;
-            font-style: normal;
-        }
-        a {
-            text-decoration: none;
-            color: #FFA500;
-        }
-        a:hover, a:focus {
-            color: #e69500;
-            text-decoration: underline;
-        }
-        /* Navbar */
-        .navbar {
-            background-color: #FFA500;
-            padding: 1rem 0;
-            z-index: 1000;
-        }
-        .navbar-brand {
-            font-weight: bold;
-            color: #fff;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-        }
-        .navbar-brand img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .navbar-nav .nav-link {
-            color: #fff;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link:focus {
-            color: #000;
-            text-decoration: underline;
-        }
-        /* Hero Section */
-        .page-header {
-            background-image: url('images/carpet-flooring-5.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 150px 0 100px; /* Increased top padding to accommodate navbar */
-            text-align: center;
-            position: relative;
-        }
-        .page-header-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-        .page-header h1 {
-            font-size: 3rem;
-            text-shadow: 2px 2px 4px #000;
-            margin-bottom: 20px;
-        }
-        .page-header p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px #000;
-        }
-        .page-header .btn-cta {
-            background-color: #FFA500;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .page-header .btn-cta:hover {
-            background-color: #e69500;
-            transform: translateY(-2px);
-        }
-        /* Service Section */
-        .service-section {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-        .service-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #FFA500;
-            font-size: 2.5rem;
-        }
-        .service-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .service-content p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        .service-content ul {
-            list-style: none;
-            padding: 0;
-        }
-        .service-content ul li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        .service-content ul li i {
-            color: #FFA500;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-        /* Image Gallery */
-        .image-gallery {
-            padding: 60px 0;
-        }
-        .image-gallery h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #FFA500;
-            font-size: 2.5rem;
-        }
-        .gallery-images img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-        }
-        .gallery-images img:hover {
-            transform: scale(1.05);
-        }
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 60px 0;
-            background-color: #fff;
-        }
-        .testimonials-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #FFA500;
-            font-size: 2.5rem;
-        }
-        .testimonial-item {
-            background-color: #f1f1f1;
-            padding: 30px;
-            border-radius: 10px;
-            position: relative;
-            transition: transform 0.3s;
-        }
-        .testimonial-item:hover {
-            transform: translateY(-5px);
-        }
-        .testimonial-item blockquote {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .testimonial-item footer {
-            text-align: right;
-            font-weight: bold;
-            color: #333;
-        }
-        /* Q&A Section */
-        .qa-section {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-        .qa-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #FFA500;
-            font-size: 2.5rem;
-        }
-        .accordion-button::after {
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            content: '\f078';
-            font-size: 1.2rem;
-            margin-left: auto;
-        }
-        .accordion-button.collapsed::after {
-            transform: rotate(180deg);
-        }
-        .qa-item .accordion-button {
-            background-color: #fff;
-            border: 1px solid #FFA500;
-            border-radius: 5px;
-            padding: 15px;
-            font-size: 1.1rem;
-            color: #333;
-            text-align: left;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .qa-item .accordion-button:hover,
-        .qa-item .accordion-button:focus {
-            background-color: #FFA500;
-            color: #fff;
-        }
-        .qa-item .accordion-body {
-            background-color: #fff;
-            border-left: 3px solid #FFA500;
-            padding-left: 15px;
-            color: #555;
-        }
-        /* Contact Section */
-        .contact-section {
-            padding: 60px 0;
-        }
-        .contact-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #FFA500;
-            font-size: 2.5rem;
-        }
-        /* Contact Info */
-        .contact-info h5 {
-            color: #FFA500;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        .contact-info p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        /* Contact Form */
-        .contact-form {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .contact-form .form-label {
-            font-weight: bold;
-            color: #333;
-        }
-        .contact-form .form-control {
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .contact-form .btn-submit {
-            background-color: #FFA500;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .contact-form .btn-submit:hover {
-            background-color: #e69500;
-            transform: translateY(-2px);
-        }
-        .contact-form .success-message {
-            display: none;
-        }
-        /* Footer */
-        .footer {
-            background-color: #000;
-            color: #fff;
-            padding: 30px 0;
-            text-align: center;
-        }
-        .footer a {
-            color: #FFA500;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer a:hover {
-            color: #e69500;
-            text-decoration: underline;
-        }
-        .footer .social-icons a {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: #fff;
-            transition: color 0.3s;
-        }
-        .footer .social-icons a:hover {
-            color: #FFA500;
-        }
-        /* Privacy Policy Modal */
-        .modal-header.bg-dark {
-            background-color: #000 !important;
-        }
-        .modal-header.text-white {
-            color: #fff !important;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .navbar-brand {
-                font-size: 1.5rem;
-            }
-            .navbar-nav .nav-link {
-                font-size: 1rem;
-            }
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            .page-header p {
-                font-size: 1rem;
-            }
-            .service-section h2, .image-gallery h2, .testimonials-section h2, .qa-section h2, .contact-section h2 {
-                font-size: 2rem;
-            }
-        }
+/* ------------------------------
+   Base Styles
+------------------------------ */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, li > a, a {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #FFA500;
+}
+
+a:hover, a:focus {
+    color: #e69500;
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   Navbar (Unchanged)
+------------------------------ */
+.navbar {
+    background-color: #FFA500;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+}
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #000;
+    text-decoration: underline;
+}
+.dropdown-menu a.dropdown-item {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-menu a.dropdown-item:hover,
+.dropdown-menu a.dropdown-item:focus {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+/* ------------------------------
+   HERO SECTION (with an image on the right and a wave at the bottom)
+------------------------------ */
+.hero-section {
+    position: relative;
+    padding-top: 80px; /* Provide space for fixed navbar */
+    background-color: #fff; /* White background so text is not cut by wave */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #333;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-cta {
+    background-color: #FFA500;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-cta:hover {
+    background-color: #e69500;
+    transform: translateY(-2px);
+}
+
+/* The wave at the bottom of the hero */
+.hero-wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0; /* behind everything */
+}
+.hero-wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+/* ------------------------------
+   WHY TRUST MPF SECTION
+------------------------------ */
+.why-mpf {
+    background-color: #fff;
+}
+.icon-why-mpf {
+    font-size: 3rem;
+    color: #FFA500;
+}
+.why-mpf p {
+    color: #555;
+}
+.why-mpf h2 {
+    color: #333;
+    font-size: 2.5rem;
+}
+.why-mpf h5 {
+    margin-top: 1rem;
+    color: #FFA500;
+    font-size: 1.4rem;
+}
+
+/* ------------------------------
+   4-STEP FITTING PROCESS
+------------------------------ */
+.fitting-process {
+    background-color: #f8f9fa; 
+}
+.fitting-process h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.step-icon {
+    font-size: 2.5rem;
+    color: #FFA500;
+}
+.fitting-process p {
+    color: #555;
+}
+
+/* ------------------------------
+   SERVICE SECTION
+------------------------------ */
+.service-section {
+    background-color: #fff;
+}
+.service-section h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+}
+.service-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+.service-section ul li i {
+    color: #FFA500;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ------------------------------
+   IMAGE GALLERY
+------------------------------ */
+.image-gallery {
+    background-color: #fff;
+}
+.image-gallery h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.gallery-card-text {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    display: none;
+}
+.gallery-card:hover {
+    transform: scale(1.02);
+}
+.gallery-card:hover .gallery-card-text {
+    display: block;
+}
+
+/* ------------------------------
+   TESTIMONIALS SECTION
+------------------------------ */
+.testimonials-section {
+    background-color: #fff;
+}
+.testimonials-section h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+}
+.testimonial-card {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    height: 100%;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.testimonial-icon i {
+    font-size: 2rem;
+    color: #FFA500;
+}
+.testimonial-card blockquote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* ------------------------------
+   Q&A SECTION
+------------------------------ */
+.qa-section {
+    background-color: #f9f9f9;
+}
+.qa-section h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+}
+.qa-item .accordion-button {
+    background-color: #fff;
+    border: 1px solid #FFA500;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+.qa-item .accordion-button:hover,
+.qa-item .accordion-button:focus {
+    background-color: #FFA500;
+    color: #fff;
+}
+.qa-item .accordion-body {
+    background-color: #fff;
+    border-left: 3px solid #FFA500;
+    padding-left: 15px;
+    color: #555;
+}
+
+/* ------------------------------
+   CONTACT SECTION
+------------------------------ */
+.contact-section {
+    background-color: #fff;
+}
+.contact-section h2 {
+    color: #FFA500;
+    font-size: 2.5rem;
+}
+.contact-section p {
+    font-size: 1rem;
+    color: #555;
+}
+.contact-info h5 {
+    color: #FFA500;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.contact-info p a {
+    color: #555;
+    text-decoration: none;
+}
+.contact-info p a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+.contact-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.btn-submit {
+    background-color: #FFA500;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-submit:hover {
+    background-color: #e69500;
+    transform: translateY(-2px);
+}
+.success-message {
+    display: none;
+}
+
+/* ------------------------------
+   FOOTER (Unchanged)
+------------------------------ */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+.footer a {
+    color: #FFA500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    color: #e69500;
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+    color: #FFA500;
+}
+
+/* ------------------------------
+   Responsive Adjustments
+------------------------------ */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 2rem !important;
+    }
+    .icon-why-mpf {
+        font-size: 2.5rem;
+    }
+    .why-mpf h5 {
+        font-size: 1.1rem;
+    }
+    .fitting-process .step-icon {
+        font-size: 2rem;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- NAVBAR (UNCHANGED) -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/morris-property-logo.webp" 
-                     alt="Morris Property Firm Logo" 
-                     class="navbar-logo me-2">
+                <img src="images/morris-property-logo.png" alt="Morris Property Firm Logo" class="navbar-logo me-2">
                 Morris Property Firm
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
            <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -366,8 +437,12 @@
                    <li class="nav-item">
                        <a class="nav-link" href="index.html">Home</a>
                    </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="about.html">About</a>
+                   </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
                            Services
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
@@ -384,11 +459,9 @@
                            <li><a class="dropdown-item" href="wood-work.html">Wood Work</a></li>
                        </ul>
                    </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="about.html">About</a>
-                   </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
                            Contact
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
@@ -411,101 +484,240 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="page-header d-flex align-items-center">
-        <div class="page-header-overlay"></div>
-        <div class="container page-header-content">
-            <h1>Carpet and Flooring Services</h1>
-            <p>Transform Your Home with Quality Carpeting and Flooring Solutions</p>
-            <a href="#contactSection" class="btn-cta">Get a Free Quote</a>
+    <!-- HERO SECTION (with an image on the right and a wave at the bottom) -->
+    <section class="hero-section position-relative">
+        <div class="container pt-2">
+            <div class="row align-items-center pt-5 pb-5">
+                <!-- Left: Text content -->
+                <div class="col-md-6 mb-4 mb-md-0 hero-text">
+                    <h1 class="mb-3">Carpet and Flooring Services</h1>
+                    <p class="lead mb-4">
+                        Elevate your home's aesthetics and comfort with our premium carpet and flooring solutions, proudly serving Bangor and North Wales.
+                    </p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#contactSection" class="btn btn-cta me-3 mb-2">Get a Free Quote</a>
+                        <a href="#servicesSection" class="btn btn-cta me-3 mb-2">View Our Services</a>
+                    </div>
+                </div>
+                <!-- Right: Hero Image -->
+                <div class="col-md-6 text-center">
+                    <img src="images/carpet-flooring-5.jpg" alt="Carpet and Flooring Example" class="img-fluid rounded shadow py-4">
+                </div>
+            </div>
+        </div>
+
+      
+
+
+        <!-- Orange Wave Divider at Bottom (Behind Content) -->
+        <div class="hero-wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path fill="#FFA500" d="M0,30 C300,100 700,0 1440,80 L1440,100 L0,100 Z"></path>
+            </svg>
         </div>
     </section>
 
-    <!-- Service Section -->
-    <section class="service-section">
-        <div class="container">
-            <h2>Our Comprehensive Carpet and Flooring Services</h2>
-            <div class="service-content">
-                <p>
-                    At <strong>Morris Property Firm (MPF)</strong>, we understand that the right flooring can elevate the aesthetic and functionality of your home. Whether you're looking to install new carpets, upgrade to laminate or vinyl flooring, or maintain and repair your existing floors, our team of experts is here to help.
-                </p>
-                <p>
-                    We offer a comprehensive range of flooring services tailored to meet your specific needs, ensuring that every project is completed to the highest standards. Our commitment to quality and customer satisfaction makes us the preferred choice for carpet and flooring services in Bangor and North Wales.
-                </p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Professional Carpet Installation:</strong> Choose from a wide variety of carpets that suit your style and comfort needs.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>High-Quality Laminate Flooring:</strong> Durable and easy-to-maintain options that mimic the look of natural wood.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Durable Vinyl Flooring Solutions:</strong> Stylish and resilient flooring options perfect for high-traffic areas.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Elegant Wood Flooring Installation:</strong> Enhance your home's warmth and beauty with our premium wood flooring services.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Low-VOC LVT Flooring:</strong> Eco-friendly and health-conscious flooring solutions for a better living environment.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Comprehensive Flooring Repairs and Maintenance:</strong> Keep your floors looking pristine with our expert repair and maintenance services.</li>
-                </ul>
-                <p>
-                    Whether you're renovating your entire home or simply updating a single room, MPF has the expertise and resources to deliver stunning results that enhance your living space and add value to your property.
-                </p>
+    <!-- WHY TRUST MPF (No wave cutting the text) -->
+    <section class="why-mpf py-5" style="background-color: #FFA5000D;">
+      <div class="container py-4">
+        <h2 class="text-center mb-5">Why Trust MPF for Your Carpet &amp; Flooring Needs?</h2>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <i class="bi bi-tools icon-why-mpf"></i>
+            <h5 class="mt-3">Expert Installation</h5>
+            <p>Our skilled team ensures precise and efficient installation for flawless flooring.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="bi bi-house icon-why-mpf"></i>
+            <h5 class="mt-3">Wide Selection</h5>
+            <p>Choose from a vast range of carpets and flooring materials to match your style.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="bi bi-check-circle-fill icon-why-mpf"></i>
+            <h5 class="mt-3">Customer Satisfaction</h5>
+            <p>We prioritize your satisfaction with quality workmanship and reliable service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP FITTING PROCESS -->
+    <section class="fitting-process bg-light pt-5 pb-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our 4-Step Carpet &amp; Flooring Installation Process</h2>
+        <div class="row">
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-chat-dots-fill step-icon"></i>
+            <h5 class="mt-3">1. Consultation</h5>
+            <p>We discuss your flooring needs, preferences, and budget to plan the perfect solution.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-chat-quote-fill step-icon"></i>
+            <h5 class="mt-3">2. Selection &amp; Design</h5>
+            <p>Assist you in selecting the right materials and design to enhance your space.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-bricks step-icon"></i>
+            <h5 class="mt-3">3. Preparation</h5>
+            <p>Properly prepare the area by cleaning, leveling, and repairing surfaces as needed.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-emoji-smile-fill step-icon"></i>
+            <h5 class="mt-3">4. Installation &amp; Finishing</h5>
+            <p>Expertly install your chosen flooring and apply finishing touches for a perfect look.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE SECTION -->
+    <section class="service-section" id="servicesSection">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Our Comprehensive Carpet &amp; Flooring Services</h2>
+            <div class="row align-items-center">
+                <!-- Intro Text -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <p>
+                        At <strong>Morris Property Firm (MPF)</strong>, we offer a wide range of carpet and flooring services designed to meet your unique needs. Whether you're renovating your entire home or updating a single room, our experienced team ensures high-quality results every time.
+                    </p>
+                    <p>
+                        Based in Bangor and serving North Wales, we pride ourselves on using top-grade materials and the latest installation techniques to provide durable and aesthetically pleasing flooring solutions.
+                    </p>
+                </div>
+                <!-- Bullet Points -->
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Carpet Installation:</strong> Wide variety of carpets to suit every style and preference.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Laminate Flooring:</strong> Durable and easy-to-maintain flooring options.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Vinyl Flooring:</strong> Stylish and resilient flooring perfect for high-traffic areas.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Wood Flooring:</strong> Premium wood flooring that adds warmth and elegance to any room.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>LVT Flooring:</strong> Luxury Vinyl Tile flooring with low VOC emissions for a healthier home.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Flooring Repair &amp; Maintenance:</strong> Keep your floors looking pristine with our expert repair services.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Gallery -->
-    <section class="image-gallery">
+    <!-- IMAGE GALLERY -->
+    <section class="image-gallery py-5">
         <div class="container">
-            <h2>Our Work in Carpet and Flooring</h2>
-            <div class="row gallery-images">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/carpet-flooring-1.jpg" alt="Elegant Carpet Installation" class="img-fluid rounded">
+            <h2 class="text-center mb-5">Our Recent Carpet &amp; Flooring Projects</h2>
+            <div class="row gallery-images g-4 d-flex justify-content-center align-items-center">
+                <div class="col-md-6 ">
+                    <div class="gallery-card">
+                        <img src="images/carpet-flooring-1.jpg" alt="Elegant Carpet Installation" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Luxurious Carpet Setup</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/carpet-flooring-2.jpg" alt="Modern Laminate Flooring" class="img-fluid rounded">
+                <div class="col-md-6 ">
+                    <div class="gallery-card">
+                        <img src="images/carpet-flooring-2.jpg" alt="Modern Laminate Flooring" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Sleek Laminate Design</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/carpet-flooring-3.jpg" alt="Durable Vinyl Flooring" class="img-fluid rounded">
+                <div class="col-md-6 ">
+                    <div class="gallery-card">
+                        <img src="images/carpet-flooring-3.jpg" alt="Durable Vinyl Flooring" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Resilient Vinyl Finish</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="gallery-card">
+                        <img src="images/carpet-flooring-4.jpg" alt="Wood Flooring Installation" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Premium Wood Floors</p>
+                        </div>
+                    </div>
+                </div>
+             
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Clients Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-icon mb-3">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p>"MPF did an outstanding job installing new carpets in our living room. The quality and attention to detail were exceptional. Highly recommended!"</p>
+                        </blockquote>
+                        <footer class="blockquote-footer mt-3">
+                            Emma L., Bangor
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-icon mb-3">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p>"We upgraded to laminate flooring with MPF, and the transformation is incredible. The team was professional, efficient, and left no mess behind."</p>
+                        </blockquote>
+                        <footer class="blockquote-footer mt-3">
+                            James T., Llandudno
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-icon mb-3">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p>"From vinyl to wood flooring, MPF provided top-notch services. Their expertise ensured that our floors are not only beautiful but also durable."</p>
+                        </blockquote>
+                        <footer class="blockquote-footer mt-3">
+                            Sarah M., Colwyn Bay
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <!-- Q&A SECTION -->
+    <section class="qa-section py-5" style="background-color: #f9f9f9;">
         <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-item">
-                        <blockquote>
-                            “MPF did an outstanding job installing new carpets in our living room. The quality and attention to detail were exceptional. Highly recommended!”
-                        </blockquote>
-                        <footer>- Emma L., Bangor</footer>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-item">
-                        <blockquote>
-                            “We upgraded to laminate flooring with MPF, and the transformation is incredible. The team was professional, efficient, and left no mess behind.”
-                        </blockquote>
-                        <footer>- James T., Llandudno</footer>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-item">
-                        <blockquote>
-                            “From vinyl to wood flooring, MPF provided top-notch services. Their expertise ensured that our floors are not only beautiful but also durable.”
-                        </blockquote>
-                        <footer>- Sarah M., Colwyn Bay</footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Q&A Section -->
-    <section class="qa-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
-                <div class="accordion-item qa-item">
+                <!-- FAQ 1 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                             What types of flooring do you offer?
                         </button>
                     </h5>
@@ -522,9 +734,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 2 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                             How long does a flooring installation take?
                         </button>
                     </h5>
@@ -542,9 +756,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 3 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                             Do you offer free consultations and quotes?
                         </button>
                     </h5>
@@ -554,9 +770,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 4 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                             How do I maintain my new flooring?
                         </button>
                     </h5>
@@ -574,9 +792,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- FAQ 5 -->
                 <div class="accordion-item qa-item">
                     <h5 class="accordion-header" id="faq5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                             Can you repair damaged flooring?
                         </button>
                     </h5>
@@ -595,19 +815,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section class="contact-section py-4" id="contactSection">
         <div class="container pt-5">
             <h2 class="text-center mb-4">Get in Touch</h2>
+            <p class="text-center mb-5">Ready to enhance your home with new carpets or flooring? Let’s discuss your project today!</p>
             <div class="row">
                 <!-- Contact Information -->
                 <div class="col-md-6 contact-info">
                     <div class="d-flex justify-content-start align-items-center mb-4">
-                        <!-- Founder's Image -->
-                        <img src="images/morris-property-logo.webp" alt="Robin Morris - Founder of Morris Property Firm" class="img-fluid border rounded" style="max-height: 200px;">
+                        <img src="images/morris-property-logo.png" alt="Robin Morris - Founder of Morris Property Firm" 
+                             class="img-fluid border rounded" style="max-height: 200px;">
                     </div>
 
                     <h5><i class="bi bi-envelope-fill"></i> Email</h5>
@@ -620,7 +840,7 @@
                     <p>123 Bangor Street, Bangor, North Wales, LL57 1AA</p>
 
                     <h5><i class="bi bi-clock-fill"></i> Working Hours</h5>
-                    <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: Closed <br>Sunday: Closed</p>
+                    <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: Closed<br>Sunday: Closed</p>
                 </div>
 
                 <!-- Contact Form -->
@@ -636,24 +856,26 @@
                         <input type="checkbox" name="automated_reply" value="yes" style="display: none;" checked>
                         
                         <div class="mb-3">
-                            <label for="name" class="form-label">Full Name<span style="color: red;">*</span></label>
+                            <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="name" name="name" required placeholder="Your Full Name">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email Address<span style="color: red;">*</span></label>
+                            <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
                             <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email Address">
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number<span style="color: red;">*</span></label>
+                            <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
                             <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Your Phone Number">
                         </div>
                         <div class="mb-3">
-                            <label for="subject-input" class="form-label">Subject<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control" id="subject-input" name="subject_input" required placeholder="Subject" value="Carpet Flooring Service Inquiry" readonly>
+                            <label for="subject-input" class="form-label">Subject <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="subject-input" name="subject_input" required 
+                                   placeholder="Subject" value="Carpet Flooring Service Inquiry" readonly>
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label">Message<span style="color: red;">*</span></label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                            <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required 
+                                      placeholder="How can we help you?"></textarea>
                         </div>
                         <button type="submit" class="btn-submit mt-2">Send Message</button>
                         <!-- Success Message -->
@@ -666,102 +888,28 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER (UNCHANGED) -->
     <footer class="footer">
         <div class="container">
             <p>
                 Email: <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>
             </p>
             <p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
             </p>
             <!-- Social Media Links -->
             <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
             <p><a href="https://cleandesignuk.com/" target="_blank">Website Designed By Clean Design UK</a></p>
         </div>
     </footer>
-
-    <!-- Privacy Policy Modal -->
-    <div
-        class="modal fade"
-        id="privacyPolicyModal"
-        tabindex="-1"
-        aria-labelledby="privacyPolicyModalLabel"
-        aria-hidden="true"
-    >
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="privacyPolicyModalLabel">
-                        Privacy Policy
-                    </h5>
-                    <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div class="modal-body">
-                    <h4>Introduction</h4>
-                    <p>
-                        We at Morris Property Firm (MPF) are committed to protecting your
-                        privacy. This Privacy Policy explains how we collect, use, and
-                        share your personal data when you use our website.
-                    </p>
-                    <h4>Data Collection</h4>
-                    <p>
-                        We collect personal data that you provide to us, such as your
-                        name, email address, and phone number, when you contact us through
-                        our website or sign up for our services.
-                    </p>
-                    <h4>Use of Data</h4>
-                    <p>
-                        We use your personal data to respond to your enquiries, provide
-                        our services, and improve our website. We may also use your data
-                        for marketing purposes, with your consent.
-                    </p>
-                    <h4>Data Sharing</h4>
-                    <p>
-                        We do not share your personal data with third parties, except as
-                        required by law or with your consent.
-                    </p>
-                    <h4>Your Rights</h4>
-                    <p>
-                        You have the right to access, correct, and delete your personal
-                        data, as well as the right to object to or restrict our use of
-                        your data. To exercise these rights, please contact us at
-                        <a href="mailto:info@morrispropertyfirm.com">info@morrispropertyfirm.com</a>.
-                    </p>
-                    <h4>GDPR Compliance</h4>
-                    <p>
-                        We comply with the General Data Protection Regulation (GDPR),
-                        which means we take steps to protect your personal data and
-                        respect your privacy rights.
-                    </p>
-                    <h4>Changes to this Policy</h4>
-                    <p>
-                        We may update this Privacy Policy from time to time. We will
-                        notify you of any changes by posting the new policy on our
-                        website.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                    >
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

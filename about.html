@@ -255,32 +255,61 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- NAVBAR (UNCHANGED) -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://res.cloudinary.com/dsedezvzs/image/upload/v1734335602/morris-property-logo_t2z3ow.png" 
-                     alt="Morris Property Firm Logo" 
-                     class="navbar-logo me-2" 
-                     style="height: 60px;">
-                Morris Property Firm 
+                <img src="images/morris-property-logo.png" alt="Morris Property Firm Logo" class="navbar-logo me-2">
+                Morris Property Firm
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-           <div class="collapse navbar-collapse" id="navbarNav">
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
                <ul class="navbar-nav ms-auto">
                    <li class="nav-item">
                        <a class="nav-link" href="index.html">Home</a>
                    </li>
                    <li class="nav-item">
-                       <a class="nav-link" href="services.html">Services</a>
+                       <a class="nav-link" href="about.html">About</a>
                    </li>
-                   <li class="nav-item">
-                       <a class="nav-link active" href="#">About</a>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                           Services
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                           <li><a class="dropdown-item" href="carpet-flooring.html">Carpet and Flooring</a></li>
+                           <li><a class="dropdown-item" href="bathroom-fitting.html">Bathroom Fitting</a></li>
+                           <li><a class="dropdown-item" href="luxury-kitchens.html">Luxury Kitchens</a></li>
+                           <li><a class="dropdown-item" href="electrician.html">Electrical Services</a></li>
+                           <li><a class="dropdown-item" href="roofing.html">Roofing Services</a></li>
+                           <li><a class="dropdown-item" href="joinery-carpentry.html">Joinery Carpentry</a></li>
+                           <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
+                           <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
+                           <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
+                           <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
+                           
+                       </ul>
                    </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="contact.html">Contact</a>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                           Contact
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                        <li><a class="dropdown-item" href="carpet-flooring.html">Carpet and Flooring</a></li>
+                        <li><a class="dropdown-item" href="bathroom-fitting.html">Bathroom Fitting</a></li>
+                        <li><a class="dropdown-item" href="luxury-kitchens.html">Luxury Kitchens</a></li>
+                        <li><a class="dropdown-item" href="electrician.html">Electrical Services</a></li>
+                        <li><a class="dropdown-item" href="roofing.html">Roofing Services</a></li>
+                        <li><a class="dropdown-item" href="joinery-carpentry.html">Joinery Carpentry</a></li>
+                        <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
+                        <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
+                        <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
+                        <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
+                       </ul>
                    </li>
                </ul>
            </div>
@@ -404,7 +433,7 @@
                 </div>
                 <div class="service-card">
                     <i class="bi bi-tools"></i>
-                    <h5><a href="wood-work.html">Wood Work</a></h5>
+                    <h5><a href="joinery-carpentry.html">Joinery </a></h5>
                 </div>
                 <!-- Add more service cards as needed -->
             </div>

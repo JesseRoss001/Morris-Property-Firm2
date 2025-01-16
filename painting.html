@@ -23,27 +23,35 @@
 
     <!-- Custom CSS -->
     <style>
-        /* General Styles */
+        /* ------------------------------
+           Base Styles
+        ------------------------------ */
         body {
             background-color: #fff;
             color: #333;
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
         }
+        
         h1, h2, h3, h4, h5, h6, li > a, a {
             font-family: "Bebas Neue", sans-serif !important;
             font-weight: 700 !important;
             font-style: normal;
         }
+        
         a {
             text-decoration: none;
             color: #FFA500;
         }
+        
         a:hover, a:focus {
             color: #e69500;
             text-decoration: underline;
         }
-        /* Navbar */
+        
+        /* ------------------------------
+           Navbar (Consistent with Other Pages)
+        ------------------------------ */
         .navbar {
             background-color: #FFA500;
             padding: 1rem 0;
@@ -70,40 +78,35 @@
             color: #000;
             text-decoration: underline;
         }
-        /* Hero Section */
-        .page-header {
-            background-image: url('images/painting-1.jpg');
-            background-size: cover;
-            background-position: center;
+        .dropdown-menu a.dropdown-item {
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dropdown-menu a.dropdown-item:hover,
+        .dropdown-menu a.dropdown-item:focus {
+            background-color: #FFA500;
             color: #fff;
-            padding: 150px 0 100px; /* Increased top padding to accommodate navbar */
-            text-align: center;
+        }
+        
+        /* ------------------------------
+           HERO SECTION
+        ------------------------------ */
+        .hero-section {
             position: relative;
+            padding-top: 80px; /* Provide space for fixed navbar */
+            background-color: #fff; /* White background so text is not cut by wave */
         }
-        .page-header-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .page-header-content {
-            position: relative;
-            z-index: 2;
-        }
-        .page-header h1 {
+        
+        .hero-text h1 {
             font-size: 3rem;
-            text-shadow: 2px 2px 4px #000;
-            margin-bottom: 20px;
+            color: #333;
         }
-        .page-header p {
+        .hero-text p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px #000;
+            color: #555;
         }
-        .page-header .btn-cta {
+        
+        .btn-cta {
             background-color: #FFA500;
             border: none;
             padding: 15px 30px;
@@ -111,117 +114,169 @@
             color: #fff;
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .page-header .btn-cta:hover {
+        .btn-cta:hover {
             background-color: #e69500;
             transform: translateY(-2px);
         }
-        /* Service Section */
+        
+        /* The wave at the bottom of the hero */
+        .hero-wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 0; /* behind everything */
+        }
+        .hero-wave-divider svg {
+            display: block;
+            width: 100%;
+            height: 100px;
+        }
+        
+        /* ------------------------------
+           WHY MPF SECTION
+        ------------------------------ */
+        .why-mpf {
+            background-color: #fff;
+        }
+        .icon-why-mpf {
+            font-size: 3rem;
+            color: #FFA500;
+        }
+        .why-mpf p {
+            color: #555;
+        }
+        .why-mpf h2 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+        .why-mpf h5 {
+            margin-top: 1rem;
+            color: #FFA500;
+            font-size: 1.4rem;
+        }
+        
+        /* ------------------------------
+           4-STEP FITTING PROCESS
+        ------------------------------ */
+        .fitting-process {
+            background-color: #f8f9fa; 
+        }
+        .fitting-process h2 {
+            color: #FFA500;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            color: #FFA500;
+        }
+        .fitting-process p {
+            color: #555;
+        }
+        
+        /* ------------------------------
+           SERVICE SECTION
+        ------------------------------ */
         .service-section {
-            padding: 60px 0;
-            background-color: #f9f9f9;
+            background-color: #fff;
         }
         .service-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
             color: #FFA500;
             font-size: 2.5rem;
         }
-        .service-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .service-content p {
+        .service-section p {
             font-size: 1.1rem;
             color: #555;
-            margin-bottom: 30px;
         }
-        .service-content ul {
-            list-style: none;
-            padding: 0;
-        }
-        .service-content ul li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        .service-content ul li i {
+        .service-section ul li i {
             color: #FFA500;
             margin-right: 10px;
             font-size: 1.2rem;
         }
-        /* Image Gallery */
+        
+        /* ------------------------------
+           IMAGE GALLERY
+        ------------------------------ */
         .image-gallery {
-            padding: 60px 0;
+            background-color: #fff;
         }
         .image-gallery h2 {
-            text-align: center;
-            margin-bottom: 40px;
             color: #FFA500;
             font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
-        .gallery-images img {
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery-card img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
         }
-        .gallery-images img:hover {
-            transform: scale(1.05);
+        .gallery-card-text {
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
         }
-        /* Testimonials Section */
+        .gallery-card:hover {
+            transform: scale(1.02);
+        }
+        .gallery-card:hover .gallery-card-text {
+            display: block;
+        }
+        
+        /* ------------------------------
+           TESTIMONIALS SECTION
+        ------------------------------ */
         .testimonials-section {
-            padding: 60px 0;
             background-color: #fff;
         }
         .testimonials-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
             color: #FFA500;
             font-size: 2.5rem;
         }
-        .testimonial-item {
+        .testimonial-card {
             background-color: #f1f1f1;
-            padding: 30px;
             border-radius: 10px;
-            position: relative;
             transition: transform 0.3s;
+            height: 100%;
         }
-        .testimonial-item:hover {
+        .testimonial-card:hover {
             transform: translateY(-5px);
         }
-        .testimonial-item blockquote {
+        .testimonial-icon i {
+            font-size: 2rem;
+            color: #FFA500;
+        }
+        .testimonial-card blockquote {
             font-style: italic;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 0;
         }
-        .testimonial-item footer {
-            text-align: right;
-            font-weight: bold;
-            color: #333;
-        }
-        /* Q&A Section */
+        
+        /* ------------------------------
+           Q&A SECTION
+        ------------------------------ */
         .qa-section {
-            padding: 60px 0;
             background-color: #f9f9f9;
         }
         .qa-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
             color: #FFA500;
             font-size: 2.5rem;
-        }
-        .accordion-button::after {
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            content: '\f078';
-            font-size: 1.2rem;
-            margin-left: auto;
-        }
-        .accordion-button.collapsed::after {
-            transform: rotate(180deg);
         }
         .qa-item .accordion-button {
             background-color: #fff;
@@ -244,28 +299,35 @@
             padding-left: 15px;
             color: #555;
         }
-        /* Contact Section */
+        
+        /* ------------------------------
+           CONTACT SECTION
+        ------------------------------ */
         .contact-section {
-            padding: 60px 0;
+            background-color: #fff;
         }
         .contact-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
             color: #FFA500;
             font-size: 2.5rem;
         }
-        /* Contact Info */
+        .contact-section p {
+            font-size: 1rem;
+            color: #555;
+        }
         .contact-info h5 {
             color: #FFA500;
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
-        .contact-info p {
-            font-size: 1rem;
+        .contact-info p a {
             color: #555;
-            margin-bottom: 20px;
+            text-decoration: none;
         }
-        /* Contact Form */
+        .contact-info p a:hover {
+            text-decoration: underline;
+        }
+        
+        /* CONTACT FORM */
         .contact-form {
             background-color: #fff;
             padding: 30px;
@@ -280,7 +342,7 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-        .contact-form .btn-submit {
+        .btn-submit {
             background-color: #FFA500;
             border: none;
             padding: 12px 25px;
@@ -288,15 +350,20 @@
             color: #fff;
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .contact-form .btn-submit:hover {
+        .btn-submit:hover {
             background-color: #e69500;
             transform: translateY(-2px);
         }
-        .contact-form .success-message {
+        .success-message {
             display: none;
         }
-        /* Footer */
+        
+        /* ------------------------------
+           FOOTER (Consistent with Other Pages)
+        ------------------------------ */
         .footer {
             background-color: #000;
             color: #fff;
@@ -321,14 +388,20 @@
         .footer .social-icons a:hover {
             color: #FFA500;
         }
-        /* Privacy Policy Modal */
+        
+        /* ------------------------------
+           Privacy Policy Modal (Consistent)
+        ------------------------------ */
         .modal-header.bg-dark {
             background-color: #000 !important;
         }
         .modal-header.text-white {
             color: #fff !important;
         }
-        /* Responsive adjustments */
+        
+        /* ------------------------------
+           Responsive Adjustments
+        ------------------------------ */
         @media (max-width: 768px) {
             .navbar-brand {
                 font-size: 1.5rem;
@@ -336,29 +409,37 @@
             .navbar-nav .nav-link {
                 font-size: 1rem;
             }
-            .page-header h1 {
+            .hero-text h1 {
                 font-size: 2rem;
             }
-            .page-header p {
+            .hero-text p {
                 font-size: 1rem;
             }
-            .service-section h2, .image-gallery h2, .testimonials-section h2, .qa-section h2, .contact-section h2 {
+            h2 {
+                font-size: 2rem !important;
+            }
+            .icon-why-mpf {
+                font-size: 2.5rem;
+            }
+            .why-mpf h5 {
+                font-size: 1.1rem;
+            }
+            .fitting-process .step-icon {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+     <!-- NAVBAR (UNCHANGED) -->
+     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/morris-property-logo.webp" 
-                     alt="Morris Property Firm Logo" 
-                     class="navbar-logo me-2">
+                <img src="images/morris-property-logo.png" alt="Morris Property Firm Logo" class="navbar-logo me-2">
                 Morris Property Firm
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
            <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -366,8 +447,12 @@
                    <li class="nav-item">
                        <a class="nav-link" href="index.html">Home</a>
                    </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="about.html">About</a>
+                   </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
                            Services
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
@@ -381,29 +466,25 @@
                            <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
                            <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
                            <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
-                           <li><a class="dropdown-item" href="wood-work.html">Wood Work</a></li>
+                           
                        </ul>
                    </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="about.html">About</a>
-                   </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" 
+                          data-bs-toggle="dropdown" aria-expanded="false">
                            Contact
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-                           <li><a class="dropdown-item" href="contact-general.html">General Contact</a></li>
-                           <li><a class="dropdown-item" href="contact-carpet-flooring.html">Carpet and Flooring</a></li>
-                           <li><a class="dropdown-item" href="contact-bathroom-fitting.html">Bathroom Fitting</a></li>
-                           <li><a class="dropdown-item" href="contact-luxury-kitchens.html">Luxury Kitchens</a></li>
-                           <li><a class="dropdown-item" href="contact-electrician.html">Electrical Services</a></li>
-                           <li><a class="dropdown-item" href="contact-roofing.html">Roofing Services</a></li>
-                           <li><a class="dropdown-item" href="contact-joinery-carpentry.html">Joinery Carpentry</a></li>
-                           <li><a class="dropdown-item" href="contact-painting.html">Painting Services</a></li>
-                           <li><a class="dropdown-item" href="contact-windows-doors.html">Windows and Doors</a></li>
-                           <li><a class="dropdown-item" href="contact-ground-work.html">Ground Work</a></li>
-                           <li><a class="dropdown-item" href="contact-builder.html">Builder Services</a></li>
-                           <li><a class="dropdown-item" href="contact-wood-work.html">Wood Work</a></li>
+                        <li><a class="dropdown-item" href="carpet-flooring.html">Carpet and Flooring</a></li>
+                        <li><a class="dropdown-item" href="bathroom-fitting.html">Bathroom Fitting</a></li>
+                        <li><a class="dropdown-item" href="luxury-kitchens.html">Luxury Kitchens</a></li>
+                        <li><a class="dropdown-item" href="electrician.html">Electrical Services</a></li>
+                        <li><a class="dropdown-item" href="roofing.html">Roofing Services</a></li>
+                        <li><a class="dropdown-item" href="joinery-carpentry.html">Joinery Carpentry</a></li>
+                        <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
+                        <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
+                        <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
+                        <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
                        </ul>
                    </li>
                </ul>
@@ -411,70 +492,172 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="page-header d-flex align-items-center">
-        <div class="page-header-overlay"></div>
-        <div class="container page-header-content">
-            <h1>Painting Services</h1>
-            <p>Transforming Spaces with Expert Interior and Exterior Painting</p>
-            <a href="#contactSection" class="btn-cta">Get a Free Quote</a>
+    <!-- HERO SECTION (with an image on the right and a wave at the bottom) -->
+    <section class="hero-section position-relative">
+        <div class="container pt-2">
+            <div class="row align-items-center pt-5 pb-5">
+                <!-- Left: Text content -->
+                <div class="col-md-6 mb-4 mb-md-0 hero-text">
+                    <h1 class="mb-3">Painting Services</h1>
+                    <p class="lead mb-4">
+                        Transforming Spaces with Expert Interior and Exterior Painting
+                    </p>
+                    <div class="d-flex flex-wrap">
+                        <a href="#contactSection" class="btn btn-cta me-3 mb-2">Get a Free Quote</a>
+                        <a href="#servicesSection" class="btn btn-cta me-3 mb-2">View Our Services</a>
+                    </div>
+                </div>
+                <!-- Right: Hero Image -->
+                <div class="col-md-6 text-center">
+                    <img src="images/painting-4.jpg" alt="Painting Services Example" class="img-fluid rounded shadow py-4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Orange Wave Divider at Bottom (Behind Content) -->
+        <div class="hero-wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path fill="#FFA500" d="M0,30 C300,100 700,0 1440,80 L1440,100 L0,100 Z"></path>
+            </svg>
         </div>
     </section>
 
-    <!-- Service Section -->
-    <section class="service-section">
-        <div class="container">
-            <h2>Our Comprehensive Painting Services</h2>
-            <div class="service-content">
-                <p>
-                    At <strong>Morris Property Firm (MPF)</strong>, we provide professional painting services that breathe new life into your property. Whether you're looking to refresh the interior of your home, enhance the exterior curb appeal, or add decorative finishes to your commercial space, our skilled painters deliver impeccable results with precision and care.
-                </p>
-                <p>
-                    Serving Bangor and North Wales, MPF is committed to using high-quality paints and materials, ensuring long-lasting and vibrant finishes. Our team works closely with you to understand your vision, offering expert advice on color selection and painting techniques to achieve the perfect look for your space.
-                </p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Interior Painting:</strong> Expert painting services for living rooms, bedrooms, kitchens, bathrooms, and more, tailored to your style and preferences.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Exterior Painting:</strong> Enhance your property's curb appeal with durable and weather-resistant exterior paint applications.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Decorative Finishes:</strong> Add character and elegance with techniques like faux finishes, murals, and textured painting.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Wallpaper Installation:</strong> Professional wallpaper hanging services to complement your painted surfaces.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Surface Preparation:</strong> Comprehensive preparation including sanding, priming, and repairing surfaces for a flawless finish.</li>
-                    <li><i class="bi bi-check-circle-fill"></i> <strong>Commercial Painting:</strong> High-quality painting solutions for offices, retail spaces, and other commercial properties.</li>
-                </ul>
-                <p>
-                    Whether it's a single room makeover or a complete property transformation, MPF has the expertise and resources to deliver stunning painting results that not only meet but exceed your expectations. Trust our dedicated team to handle all aspects of your painting project with professionalism and attention to detail.
-                </p>
+    <!-- WHY TRUST MPF (No wave cutting the text) -->
+    <section class="why-mpf py-5" style="background-color: #FFA5000D;">
+      <div class="container py-4">
+        <h2 class="text-center mb-5">Why Trust MPF for Your Painting Projects?</h2>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <i class="bi bi-palette-fill icon-why-mpf"></i>
+            <h5 class="mt-3">Expert Color Consultation</h5>
+            <p>Our specialists help you choose the perfect colors to enhance your space’s aesthetic.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="bi bi-brush-fill icon-why-mpf"></i>
+            <h5 class="mt-3">Quality Materials</h5>
+            <p>We use top-grade, eco-friendly paints that ensure vibrant and long-lasting finishes.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="bi bi-gear-fill icon-why-mpf"></i>
+            <h5 class="mt-3">Professional Team</h5>
+            <p>Our skilled painters deliver meticulous workmanship with attention to every detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP FITTING PROCESS -->
+    <section class="fitting-process bg-light pt-5 pb-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our 4-Step Painting Process</h2>
+        <div class="row">
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-chat-dots-fill step-icon"></i>
+            <h5 class="mt-3">1. Consultation</h5>
+            <p>We discuss your vision, color preferences, and project scope to create a tailored plan.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-pencil-fill step-icon"></i>
+            <h5 class="mt-3">2. Surface Preparation</h5>
+            <p>Cleaning, sanding, and priming surfaces to ensure a smooth and durable finish.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-brush-fill step-icon"></i>
+            <h5 class="mt-3">3. Painting</h5>
+            <p>Applying high-quality paints with precision to achieve flawless and vibrant results.</p>
+          </div>
+          <div class="col-md-3 text-center mb-4">
+            <i class="bi bi-check-circle-fill step-icon"></i>
+            <h5 class="mt-3">4. Final Inspection</h5>
+            <p>Conducting thorough quality checks to ensure your complete satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE SECTION -->
+    <section class="service-section" id="servicesSection">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Our Comprehensive Painting Services</h2>
+            <div class="row align-items-center">
+                <!-- Intro Text -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <p>
+                        At <strong>Morris Property Firm (MPF)</strong>, we provide professional painting services that breathe new life into your property. Whether you're looking to refresh the interior of your home, enhance the exterior curb appeal, or add decorative finishes to your commercial space, our skilled painters deliver impeccable results with precision and care.
+                    </p>
+                    <p>
+                        Serving Bangor and North Wales, MPF is committed to using high-quality paints and materials, ensuring long-lasting and vibrant finishes. Our team works closely with you to understand your vision, offering expert advice on color selection and painting techniques to achieve the perfect look for your space.
+                    </p>
+                </div>
+                <!-- Bullet Points -->
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Interior Painting:</strong> Expert painting services for living rooms, bedrooms, kitchens, bathrooms, and more, tailored to your style and preferences.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Exterior Painting:</strong> Enhance your property's curb appeal with durable and weather-resistant exterior paint applications.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Decorative Finishes:</strong> Add character and elegance with techniques like faux finishes, murals, and textured painting.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Wallpaper Installation:</strong> Professional wallpaper hanging services to complement your painted surfaces.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Surface Preparation:</strong> Comprehensive preparation including sanding, priming, and repairing surfaces for a flawless finish.
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                            <strong>Commercial Painting:</strong> High-quality painting solutions for offices, retail spaces, and other commercial properties.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Image Gallery -->
-    <section class="image-gallery">
+    <!-- IMAGE GALLERY -->
+    <section class="image-gallery py-5">
         <div class="container">
-            <h2>Our Work in Painting Services</h2>
-            <div class="row gallery-images">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-1.jpg" alt="Interior Painting Transformation" class="img-fluid rounded">
+            <h2 class="text-center mb-5">Our Recent Painting Projects</h2>
+            <div class="row gallery-images g-4 d-flex justify-content-center align-items-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="images/painting-1.jpg" alt="Interior Painting Transformation" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Modern Living Room Makeover</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-2.jpg" alt="Exterior Painting Project" class="img-fluid rounded">
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="images/painting-2.jpg" alt="Exterior Painting Project" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Elegant Exterior Facade</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-3.jpg" alt="Decorative Mural Painting" class="img-fluid rounded">
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="images/painting-3.jpg" alt="Decorative Mural Painting" class="img-fluid rounded">
+                        <div class="gallery-card-text p-2">
+                            <p class="m-0">Custom Artistic Mural</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-4.jpg" alt="Wallpaper Installation" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-5.jpg" alt="Faux Finish Technique" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <img src="images/painting-6.jpg" alt="Commercial Office Painting" class="img-fluid rounded">
-                </div>
+             
+            
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- TESTIMONIALS SECTION -->
     <section class="testimonials-section">
         <div class="container">
             <h2>What Our Clients Say</h2>
@@ -507,14 +690,16 @@
         </div>
     </section>
 
-    <!-- Q&A Section -->
+    <!-- Q&A SECTION -->
     <section class="qa-section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
-                <div class="accordion-item qa-item">
+                <!-- FAQ 1 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                             What types of paint do you use?
                         </button>
                     </h5>
@@ -524,9 +709,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 2 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                             How do you prepare surfaces before painting?
                         </button>
                     </h5>
@@ -536,9 +723,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 3 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                             Can you help with color selection?
                         </button>
                     </h5>
@@ -548,9 +737,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item qa-item">
+                <!-- FAQ 4 -->
+                <div class="accordion-item qa-item mb-3">
                     <h5 class="accordion-header" id="faq4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                             Do you offer services for both residential and commercial properties?
                         </button>
                     </h5>
@@ -560,9 +751,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- FAQ 5 -->
                 <div class="accordion-item qa-item">
                     <h5 class="accordion-header" id="faq5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                             How can I schedule a painting service?
                         </button>
                     </h5>
@@ -576,16 +769,17 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section class="contact-section py-4" id="contactSection">
         <div class="container pt-5">
             <h2 class="text-center mb-4">Get in Touch</h2>
+            <p class="text-center mb-5">Ready to transform your space? Let’s discuss your painting project today!</p>
             <div class="row">
                 <!-- Contact Information -->
                 <div class="col-md-6 contact-info">
                     <div class="d-flex justify-content-start align-items-center mb-4">
-                        <!-- Founder's Image -->
-                        <img src="images/morris-property-logo.webp" alt="Robin Morris - Founder of Morris Property Firm" class="img-fluid border rounded" style="max-height: 200px;">
+                        <img src="images/morris-property-logo.webp" alt="Robin Morris - Founder of Morris Property Firm" 
+                             class="img-fluid border rounded" style="max-height: 200px;">
                     </div>
 
                     <h5><i class="bi bi-envelope-fill"></i> Email</h5>
@@ -598,7 +792,7 @@
                     <p>123 Bangor Street, Bangor, North Wales, LL57 1AA</p>
 
                     <h5><i class="bi bi-clock-fill"></i> Working Hours</h5>
-                    <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: Closed <br>Sunday: Closed</p>
+                    <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Saturday: Closed<br>Sunday: Closed</p>
                 </div>
 
                 <!-- Contact Form -->
@@ -614,24 +808,26 @@
                         <input type="checkbox" name="automated_reply" value="yes" style="display: none;" checked>
                         
                         <div class="mb-3">
-                            <label for="name" class="form-label">Full Name<span style="color: red;">*</span></label>
+                            <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="name" name="name" required placeholder="Your Full Name">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email Address<span style="color: red;">*</span></label>
+                            <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
                             <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email Address">
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number<span style="color: red;">*</span></label>
+                            <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
                             <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Your Phone Number">
                         </div>
                         <div class="mb-3">
-                            <label for="subject-input" class="form-label">Subject<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control" id="subject-input" name="subject_input" required placeholder="Subject" value="Painting Service Inquiry" readonly>
+                            <label for="subject-input" class="form-label">Subject <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="subject-input" name="subject_input" required 
+                                   placeholder="Subject" value="Painting Service Inquiry" readonly>
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label">Message<span style="color: red;">*</span></label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                            <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required 
+                                      placeholder="How can we help you?"></textarea>
                         </div>
                         <button type="submit" class="btn-submit mt-2">Send Message</button>
                         <!-- Success Message -->
@@ -644,7 +840,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (Consistent) -->
     <footer class="footer">
         <div class="container">
             <p>
@@ -655,8 +851,12 @@
             </p>
             <!-- Social Media Links -->
             <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
             <p><a href="https://cleandesignuk.com/" target="_blank">Website Designed By Clean Design UK</a></p>
@@ -744,36 +944,3 @@
     <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Web3Forms Submission Handling -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('successMessage').style.display = 'block';
-                    form.reset();
-                } else {
-                    alert('There was an error submitting your form. Please try again.');
-                }
-            })
-            .catch(error => {
-                alert('There was an error submitting your form. Please try again.');
-            });
-        });
-    </script>
-</body>
-</html>
