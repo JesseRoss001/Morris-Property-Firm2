@@ -11,32 +11,56 @@
     <meta name="keywords" content="Property Restoration Bangor, Property Repairs North Wales, Property Maintenance Bangor, Morris Property Firm, MPF, Bangor Property Services, North Wales Property Maintenance, Local Property Restoration, Bangor Property Repairs, Property Services North Wales">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+    >
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    >
     <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" 
+      rel="stylesheet"
+    >
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/morris-property-logo.png" alt="Morris Property Firm Logo">
+    <link 
+      rel="icon" 
+      type="image/png" 
+      href="images/morris-property-logo.png" 
+      alt="Morris Property Firm Logo"
+    >
     
     <!-- Custom CSS -->
     <style>
-        /* Custom styles */
-        body {
-            background-color: #fff;
-            color: #000;
+        /* Global Resets and No Horizontal Scroll */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            background-color: #fff;
+            color: #000;
         }
+
         h1, h2, h3, h4, h5, h6, li > a, a {
             font-family: "Bebas Neue", sans-serif !important;
             font-weight: 700 !important;
             font-style: normal;
         }
+
         a {
             text-decoration: none;
             color: #FFA500;
@@ -45,11 +69,13 @@
             color: #e69500;
             text-decoration: underline;
         }
+
         /* Header */
         .navbar {
             background-color: #FFA500;
             padding: 1rem 0;
             z-index: 1000;
+            width: 100%;
         }
         .navbar-brand {
             font-weight: bold;
@@ -82,6 +108,7 @@
             background-color: #FFA500;
             color: #fff;
         }
+
         /* Hero Section */
         .hero {
             background-image: url('images/carpet-flooring-5.jpg');
@@ -94,7 +121,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            overflow: hidden;
         }
         .hero-overlay {
             background-color: rgba(0, 0, 0, 0.6);
@@ -142,6 +168,7 @@
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
+
         /* Introduction Section */
         .introduction {
             padding: 50px 0;
@@ -154,6 +181,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+
         /* Our Trusted Team */
         .trusted-team {
             padding: 50px 0;
@@ -168,6 +196,7 @@
             font-size: 1.1rem;
             color: #555;
         }
+
         /* Comprehensive Property Services */
         .services {
             padding: 50px 0;
@@ -178,7 +207,6 @@
             margin-bottom: 40px;
             color: #FFA500;
         }
-       
         .service-card {
             background-color: #fff;
             border: 2px solid #FFA500;
@@ -226,6 +254,7 @@
             margin-top: 10px;
             color: #666;
         }
+
         /* Service Areas Section */
         .service-areas {
             padding: 50px 0;
@@ -264,7 +293,8 @@
         .areas-list li p {
             color: #666;
         }
-        /* Why Choose Us Section - Animated Swiper Carousel */
+
+        /* Why Choose Us Section - Swiper */
         .why-choose {
             padding: 50px 0;
             background-color: #f1f1f1;
@@ -277,6 +307,7 @@
         .why-choose .swiper-container {
             width: 100%;
             padding: 20px 0;
+            overflow: hidden; /* Prevent any horizontal overflow */
         }
         .why-choose .swiper-slide {
             background-color: #fff;
@@ -306,7 +337,8 @@
         .why-choose .swiper-slide p {
             color: #666;
         }
-        /* Testimonials Section - Swiper Carousel */
+
+        /* Testimonials Section - Swiper */
         .testimonials {
             padding: 50px 0;
             background-color: #f9f9f9;
@@ -319,16 +351,17 @@
         .testimonials .swiper-container {
             width: 100%;
             padding: 20px 0;
+            overflow: hidden; /* Prevent any horizontal overflow */
         }
         .testimonials .swiper-slide {
             background-color: #fff;
             border-left: 5px solid #FFA500;
             padding: 20px;
-            transition: background-color 0.3s;
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 100%;
+            transition: background-color 0.3s;
         }
         .testimonials .swiper-slide:hover {
             background-color: #f0f0f0;
@@ -343,6 +376,7 @@
             font-size: 0.9rem;
             color: #333;
         }
+
         /* Call to Action Section */
         .cta {
             background-color: #FFA500;
@@ -374,6 +408,7 @@
             background-color: #e0e0e0;
             transform: scale(1.05);
         }
+
         /* Footer */
         .footer {
             background-color: #000;
@@ -399,6 +434,7 @@
         .footer .social-icons a:hover {
             color: #FFA500;
         }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .navbar-brand {
@@ -439,26 +475,46 @@
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="images/morris-property-logo.png" alt="Morris Property Firm Logo" class="navbar-logo me-2">
-                Morris Property Firm
+                <img 
+                  src="images/morris-property-logo.png" 
+                  alt="Morris Property Firm Logo" 
+                  class="navbar-logo me-2"
+                >
+                <span class="d-none d-md-flex">Morris Property Firm</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                <ul class="navbar-nav ms-auto">
                    <li class="nav-item">
-                       <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                       <a class="nav-link" href="index.html">Home</a>
                    </li>
                    <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="about.html">About</a>
-                </li>
+                       <a class="nav-link" href="about.html">About</a>
+                   </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a 
+                         class="nav-link dropdown-toggle" 
+                         href="#" 
+                         id="servicesDropdown" 
+                         role="button" 
+                         data-bs-toggle="dropdown" 
+                         aria-expanded="false"
+                       >
                            Services
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
@@ -471,27 +527,33 @@
                            <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
                            <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
                            <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
-                           <li><a class="dropdown-item" href="builder.html#contactSection">Builder Services</a></li>
-                           <!-- Wood Work removed -->
+                           <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
+                           <li><a class="dropdown-item" href="plastering.html">Plastering Services</a></li>
                        </ul>
                    </li>
                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <a 
+                         class="nav-link dropdown-toggle" 
+                         href="#" 
+                         id="contactDropdown" 
+                         role="button" 
+                         data-bs-toggle="dropdown" 
+                         aria-expanded="false"
+                       >
                            Contact
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-                        <li><a class="dropdown-item" href="contact.html"> Contact us Directly </a></li>
-                           <li><a class="dropdown-item" href="builder.html#contactSection">Builder Services</a></li>
-                           <li><a class="dropdown-item" href="carpet-flooring.html#contactSection">Carpet and Flooring</a></li>
-                           <li><a class="dropdown-item" href="bathroom-fitting.html#contactSection">Bathroom Fitting</a></li>
-                           <li><a class="dropdown-item" href="luxury-kitchens.html#contactSection">Luxury Kitchens</a></li>
-                           <li><a class="dropdown-item" href="electrician.html#contactSection">Electrical Services</a></li>
-                           <li><a class="dropdown-item" href="roofing.html#contactSection">Roofing Services</a></li>
-                           <li><a class="dropdown-item" href="joinery-carpentry.html#contactSection">Joinery Carpentry</a></li>
-                           <li><a class="dropdown-item" href="painting.html#contactSection">Painting Services</a></li>
-                           <li><a class="dropdown-item" href="windows-doors.html#contactSection">Windows and Doors</a></li>
-                           <li><a class="dropdown-item" href="ground-work.html#contactSection">Ground Work</a></li>
-                           <!-- Wood Work removed -->
+                           <li><a class="dropdown-item" href="carpet-flooring.html">Carpet and Flooring</a></li>
+                           <li><a class="dropdown-item" href="bathroom-fitting.html">Bathroom Fitting</a></li>
+                           <li><a class="dropdown-item" href="luxury-kitchens.html">Luxury Kitchens</a></li>
+                           <li><a class="dropdown-item" href="electrician.html">Electrical Services</a></li>
+                           <li><a class="dropdown-item" href="roofing.html">Roofing Services</a></li>
+                           <li><a class="dropdown-item" href="joinery-carpentry.html">Joinery Carpentry</a></li>
+                           <li><a class="dropdown-item" href="painting.html">Painting Services</a></li>
+                           <li><a class="dropdown-item" href="windows-doors.html">Windows and Doors</a></li>
+                           <li><a class="dropdown-item" href="ground-work.html">Ground Work</a></li>
+                           <li><a class="dropdown-item" href="builder.html">Builder Services</a></li>
+                           <li><a class="dropdown-item" href="plastering.html">Plastering Services</a></li>
                        </ul>
                    </li>
                </ul>
@@ -521,7 +583,11 @@
                     </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="images/morris-property-firm-1.jpg" alt="Robin Morris - Founder of Morris Property Firm" class="img-fluid rounded shadow">
+                    <img 
+                      src="images/morris-property-firm-1.jpg" 
+                      alt="Robin Morris - Founder of Morris Property Firm" 
+                      class="img-fluid rounded shadow"
+                    >
                 </div>
             </div>
         </div>
@@ -541,12 +607,16 @@
     <section class="services" id="servicesSection">
         <div class="container">
             <h2>Comprehensive Property Services</h2>
-            <div class="row d-flex justify-content-center align-items-stretch ">
+            <div class="row d-flex justify-content-center align-items-stretch">
                 <!-- Carpet and Flooring -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-left" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-left" data-aos-delay="50">
                     <a href="carpet-flooring.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/carpet-flooring-1.jpg" alt="Carpet and Flooring Services" class="img-fluid">
+                            <img 
+                              src="images/carpet-flooring-1.jpg" 
+                              alt="Carpet and Flooring Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-grid-1x2 service-icon"></i>
@@ -556,10 +626,14 @@
                     </a>
                 </div>
                 <!-- Bathroom Fitting -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in" data-aos-delay="50">
                     <a href="bathroom-fitting.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/plumbing-bathroom-fitting-1.jpg" alt="Bathroom Fitting Services" class="img-fluid">
+                            <img 
+                              src="images/plumbing-bathroom-fitting-1.jpg" 
+                              alt="Bathroom Fitting Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">    
                             <i class="bi bi-bucket-fill service-icon"></i>
@@ -569,10 +643,14 @@
                     </a>
                 </div>
                 <!-- Luxury Kitchens -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-right" data-aos-delay="300">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-right" data-aos-delay="50">
                     <a href="luxury-kitchens.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/luxury-kitchen-1.jpg" alt="Luxury Kitchen Services" class="img-fluid">
+                            <img 
+                              src="images/luxury-kitchen-1.jpg" 
+                              alt="Luxury Kitchen Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-kitchen service-icon"></i>
@@ -582,10 +660,14 @@
                     </a>
                 </div>
                 <!-- Electrical Services -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-up" data-aos-delay="400">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-up" data-aos-delay="50">
                     <a href="electrician.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/electrician-1.jpg" alt="Electrical Services" class="img-fluid">
+                            <img 
+                              src="images/electrician-1.jpg" 
+                              alt="Electrical Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-lightning-fill service-icon"></i>
@@ -595,10 +677,14 @@
                     </a>
                 </div>
                 <!-- Roofing Services -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-up" data-aos-delay="500">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-up" data-aos-delay="50">
                     <a href="roofing.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/roofing-1.jpg" alt="Roofing Services" class="img-fluid">
+                            <img 
+                              src="images/roofing-1.jpg" 
+                              alt="Roofing Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-house service-icon"></i>
@@ -608,10 +694,14 @@
                     </a>
                 </div>
                 <!-- Joinery Carpentry -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-down" data-aos-delay="600">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-down" data-aos-delay="50">
                     <a href="joinery-carpentry.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/joinery-carpentry-1.jpg" alt="Joinery Carpentry Services" class="img-fluid">
+                            <img 
+                              src="images/joinery-carpentry-1.jpg" 
+                              alt="Joinery Carpentry Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-hammer service-icon"></i>
@@ -621,10 +711,14 @@
                     </a>
                 </div>
                 <!-- Painting Services -->
-                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="700">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-left" data-aos-delay="50">
                     <a href="painting.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/painting-1.jpg" alt="Painting Services" class="img-fluid">
+                            <img 
+                              src="images/painting-1.jpg" 
+                              alt="Painting Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-brush service-icon"></i>
@@ -634,10 +728,14 @@
                     </a>
                 </div>
                 <!-- Windows and Doors -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-up" data-aos-delay="800">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-up" data-aos-delay="50">
                     <a href="windows-doors.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/windows-1.jpg" alt="Windows and Doors Services" class="img-fluid">
+                            <img 
+                              src="images/windows-1.jpg" 
+                              alt="Windows and Doors Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-window service-icon"></i>
@@ -647,10 +745,14 @@
                     </a>
                 </div>
                 <!-- Ground Work -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-right" data-aos-delay="900">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-right" data-aos-delay="50">
                     <a href="ground-work.html" class="service-card">
                         <div class="service-header">
-                            <img src="images/ground-work-1.jpg" alt="Ground Work Services" class="img-fluid">
+                            <img 
+                              src="images/ground-work-1.jpg" 
+                              alt="Ground Work Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-geo-alt-fill service-icon"></i>
@@ -660,10 +762,14 @@
                     </a>
                 </div>
                 <!-- Builder Services -->
-                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                <div class="col-md-6 col-lg-4 py-2" data-aos="zoom-in-down" data-aos-delay="50">
                     <a href="builder.html#contactSection" class="service-card">
                         <div class="service-header">
-                            <img src="images/builder-1.jpg" alt="Builder Services" class="img-fluid">
+                            <img 
+                              src="images/builder-1.jpg" 
+                              alt="Builder Services" 
+                              class="img-fluid"
+                            >
                         </div>
                         <div class="service-body">
                             <i class="bi bi-building service-icon"></i>
@@ -673,18 +779,22 @@
                     </a>
                 </div>
                 <!-- Plastering Services -->
-<div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="1100">
-    <a href="plastering.html" class="service-card">
-        <div class="service-header">
-            <img src="images/wall-plastering-1.jpg" alt="Plastering Services" class="img-fluid">
-        </div>
-        <div class="service-body">
-            <i class="bi bi-bricks service-icon"></i>
-            <h5>Plastering Services</h5>
-        </div>
-        <p>High-quality plastering services for smooth and flawless walls and ceilings.</p>
-    </a>
-</div>
+                <div class="col-md-6 col-lg-4 py-2" data-aos="flip-left" data-aos-delay="50">
+                    <a href="plastering.html" class="service-card">
+                        <div class="service-header">
+                            <img 
+                              src="images/wall-plastering-1.jpg" 
+                              alt="Plastering Services" 
+                              class="img-fluid"
+                            >
+                        </div>
+                        <div class="service-body">
+                            <i class="bi bi-bricks service-icon"></i>
+                            <h5>Plastering Services</h5>
+                        </div>
+                        <p>High-quality plastering services for smooth and flawless walls and ceilings.</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -694,47 +804,47 @@
         <div class="container">
             <h2>Areas We Service</h2>
             <ul class="areas-list">
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li data-aos="fade-up" data-aos-delay="50">
                     <h5>Anglesey</h5>
                     <p>Providing quality property services across Anglesey.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="200">
+                <li data-aos="fade-up" data-aos-delay="100">
                     <h5>Gwynedd</h5>
                     <p>Comprehensive property maintenance in Gwynedd.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="300">
+                <li data-aos="fade-up" data-aos-delay="150">
                     <h5>Bangor</h5>
                     <p>Your home base, offering all services locally.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="400">
+                <li data-aos="fade-up" data-aos-delay="200">
                     <h5>Caernarfon</h5>
                     <p>Your trusted partner for property care in Caernarfon.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="500">
+                <li data-aos="fade-up" data-aos-delay="250">
                     <h5>Llandudno</h5>
                     <p>Serving Llandudno with quality restoration and repairs.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="600">
+                <li data-aos="fade-up" data-aos-delay="300">
                     <h5>Holyhead</h5>
                     <p>Comprehensive property maintenance in Holyhead.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="700">
+                <li data-aos="fade-up" data-aos-delay="350">
                     <h5>Colwyn Bay</h5>
                     <p>Providing expert property services to Colwyn Bay residents.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="800">
+                <li data-aos="fade-up" data-aos-delay="400">
                     <h5>Pwllheli</h5>
                     <p>Reliable property solutions in Pwllheli.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="900">
+                <li data-aos="fade-up" data-aos-delay="450">
                     <h5>Barmouth</h5>
                     <p>Professional property services available in Barmouth.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="1000">
+                <li data-aos="fade-up" data-aos-delay="500">
                     <h5>Y Felinheli</h5>
                     <p>Trusted property maintenance in Y Felinheli.</p>
                 </li>
-                <li data-aos="fade-up" data-aos-delay="1100">
+                <li data-aos="fade-up" data-aos-delay="550">
                     <h5>Other Areas</h5>
                     <p>We serve all surrounding areas across North Wales.</p>
                 </li>
@@ -759,16 +869,19 @@
                     <div class="swiper-slide" style="height:300px">
                         <i class="bi bi-gear-fill"></i>
                         <h5>Reputable Connections</h5>
-                        <p>With MPF, you benefit from our trusted partnerships with reliable tradespeople in North Wales.</p>
+                        <p>Benefit from our trusted partnerships with reliable tradespeople across North Wales.</p>
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide" style="height:300px">
                         <i class="bi bi-emoji-smile-fill"></i>
                         <h5>Customer-Focused Approach</h5>
-                        <p>MPF provides personalised service tailored to meet your specific property needs.</p>
+                        <p>MPF provides personalized service tailored to meet your specific property needs.</p>
                     </div>
                 </div>
-              
+                <!-- If you want pagination or navigation, add here:
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
         </div>
     </section>
@@ -807,7 +920,10 @@
                         </div>
                     </div>
                 </div>
-           
+                <!-- Optional Swiper pagination or navigation here:
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
         </div>
     </section>
@@ -832,39 +948,58 @@
             </p>
             <!-- Social Media Links -->
             <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61556523552365" 
+                  target="_blank" 
+                  aria-label="Facebook"
+                >
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a 
+                  href="https://www.instagram.com/YourInstagramPage" 
+                  target="_blank" 
+                  aria-label="Instagram"
+                >
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
-            <p><a href="https://cleandesignuk.com/" target="_blank">Website Designed By Clean Design UK</a></p>
+            <p>
+                <a 
+                  href="https://cleandesignuk.com/" 
+                  target="_blank"
+                >
+                  Website Designed By Clean Design UK
+                </a>
+            </p>
         </div>
     </footer>
 
     <!-- Bootstrap JS, Swiper.js, GSAP, and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
     <!-- Swiper.js JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    ></script>
     <!-- GSAP JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
     <script>
-        // Initialize Swiper Carousel for "Why Choose MPF"
+        // Initialize Swiper for "Why Choose MPF"
         const whyChooseSwiper = new Swiper('.why-choose .swiper-container', {
             loop: true,
             autoplay: {
-                delay: 5000,
+                delay: 4000, // Slightly faster for mobile
                 disableOnInteraction: false,
             },
-            pagination: {
-                el: '.why-choose .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.why-choose .swiper-button-next',
-                prevEl: '.why-choose .swiper-button-prev',
-            },
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 20,
             breakpoints: {
                 768: {
                     slidesPerView: 2,
@@ -877,145 +1012,143 @@
             },
         });
 
-        // Initialize Swiper Carousel for Testimonials
+        // Initialize Swiper for Testimonials
         const testimonialSwiper = new Swiper('.testimonials .swiper-container', {
             loop: true,
             autoplay: {
-                delay: 7000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
-            pagination: {
-                el: '.testimonials .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.testimonials .swiper-button-next',
-                prevEl: '.testimonials .swiper-button-prev',
-            },
             slidesPerView: 1,
-            spaceBetween: 30,
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                },
-            },
+            spaceBetween: 20,
         });
 
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
 
-        // Hero Section Animations
+        // Hero Section Animations (slightly reduced durations & delays)
         gsap.to("#heroSection h1", {
-            duration: 1,
+            duration: 0.8,
             opacity: 1,
             y: 0,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: "#heroSection h1",
-                start: "top 80%",
+                start: "top 85%",
             }
         });
 
         gsap.to("#heroSection p", {
-            duration: 1,
+            duration: 0.8,
             opacity: 1,
             y: 0,
             ease: "power2.out",
-            delay: 0.5,
+            delay: 0.3,
             scrollTrigger: {
                 trigger: "#heroSection p",
-                start: "top 80%",
+                start: "top 85%",
             }
         });
 
         gsap.to("#heroSection .btn-primary", {
-            duration: 1,
+            duration: 0.8,
             opacity: 1,
             scale: 1,
             ease: "back.out(1.7)",
-            delay: 1,
+            delay: 0.6,
             scrollTrigger: {
                 trigger: "#heroSection .btn-primary",
-                start: "top 80%",
+                start: "top 85%",
             }
         });
 
         // Service Cards Animations
-        gsap.utils.toArray('.service-card').forEach((card, index) => {
+        gsap.utils.toArray('.service-card').forEach((card) => {
             gsap.from(card, {
                 scrollTrigger: {
                     trigger: card,
-                    start: "top 85%",
+                    start: "top 90%",
                     toggleActions: "play none none reverse",
                 },
                 opacity: 0,
                 y: 50,
-                duration: 1,
-                delay: index * 0.2,
+                duration: 0.6,
                 ease: "power2.out",
             });
         });
 
         // Service Areas Animations
-        gsap.utils.toArray('.areas-list li').forEach((item, index) => {
+        gsap.utils.toArray('.areas-list li').forEach((item) => {
             gsap.from(item, {
                 scrollTrigger: {
                     trigger: item,
-                    start: "top 90%",
+                    start: "top 95%",
                     toggleActions: "play none none reverse",
                 },
                 opacity: 0,
                 y: 30,
-                duration: 1,
-                delay: index * 0.1,
+                duration: 0.6,
                 ease: "power2.out",
             });
         });
 
-        // "Why Choose MPF" Carousel Animations using GSAP
-        gsap.utils.toArray('.why-choose .swiper-slide').forEach((slide, index) => {
+        // "Why Choose MPF" - Animate each slide's content
+        gsap.utils.toArray('.why-choose .swiper-slide').forEach((slide) => {
             gsap.from(slide.querySelector('.bi'), {
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "top 95%",
+                },
                 opacity: 0,
                 scale: 0.5,
-                duration: 1,
-                delay: 0.2,
+                duration: 0.6,
                 ease: "power2.out",
             });
             gsap.from(slide.querySelector('h5'), {
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "top 95%",
+                },
                 opacity: 0,
                 y: 20,
-                duration: 1,
-                delay: 0.4,
+                duration: 0.6,
+                delay: 0.2,
                 ease: "power2.out",
             });
             gsap.from(slide.querySelector('p'), {
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "top 95%",
+                },
                 opacity: 0,
                 y: 20,
-                duration: 1,
-                delay: 0.6,
+                duration: 0.6,
+                delay: 0.3,
                 ease: "power2.out",
             });
         });
 
         // Testimonials Animations
-        gsap.utils.toArray('.testimonials .swiper-slide').forEach((slide, index) => {
+        gsap.utils.toArray('.testimonials .swiper-slide').forEach((slide) => {
             gsap.from(slide.querySelector('blockquote'), {
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "top 95%",
+                },
                 opacity: 0,
-                x: -50,
-                duration: 1,
-                delay: 0.2,
+                x: -30,
+                duration: 0.6,
                 ease: "power2.out",
             });
             gsap.from(slide.querySelector('footer'), {
+                scrollTrigger: {
+                    trigger: slide,
+                    start: "top 95%",
+                },
                 opacity: 0,
-                x: -50,
-                duration: 1,
-                delay: 0.4,
+                x: -30,
+                duration: 0.6,
+                delay: 0.3,
                 ease: "power2.out",
             });
         });
@@ -1024,11 +1157,11 @@
         gsap.from(".cta .btn", {
             scrollTrigger: {
                 trigger: ".cta .btn",
-                start: "top 80%",
+                start: "top 85%",
             },
             opacity: 0,
             scale: 0.8,
-            duration: 1,
+            duration: 0.8,
             ease: "back.out(1.7)",
         });
     </script>
