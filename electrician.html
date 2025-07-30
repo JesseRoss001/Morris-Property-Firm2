@@ -4,11 +4,63 @@
     <!-- Head Section -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrical Services | Morris Property Firm (MPF)</title>
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="Professional electrical services by MPF in Bangor and North Wales. From installations and repairs to maintenance, our certified electricians ensure safety and reliability for your home or business.">
-    <!-- Meta Keywords for SEO -->
-    <meta name="keywords" content="Electrical Services Bangor, Certified Electricians, Electrical Installations, Electrical Repairs, North Wales Electrical Services, Home Electrical Maintenance, Commercial Electrical Solutions, Electrical Safety Inspections, Smart Home Integration">
+    
+<!-- SEO title (≤60 chars, keyword-first) -->
+  <title>Electrician Bangor & Gwynedd | Domestic & Commercial Electrical Services – MPF</title>
+
+  <!-- Meta description (≈155 chars) -->
+  <meta name="description"
+        content="Certified electricians in Bangor, Gwynedd providing installations, rewires, fault-finding and smart-home upgrades for homes & businesses across North Wales.">
+
+  <!-- Compact keyword tag -->
+  <meta name="keywords"
+        content="electrician Bangor, electrical services Gwynedd, electrical installation North Wales, rewiring Bangor">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://morrispropertyfirm.co.uk/electrician.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Electrician in Bangor | Morris Property Firm">
+  <meta property="og:description" content="Reliable electrical installations, repairs and safety testing across Bangor & North Wales.">
+  <meta property="og:url"         content="https://morrispropertyfirm.co.uk/electrician.html">
+  <meta property="og:image"       content="https://morrispropertyfirm.co.uk/images/electrician-4.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Certified Electricians – Bangor, Gwynedd">
+  <meta name="twitter:description" content="From lighting upgrades to smart-home integration, MPF keeps your electrics safe and compliant.">
+
+  <!-- Local business / service schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Electrician", "HomeAndConstructionBusiness"],
+    "name": "Morris Property Firm – Electrical Division",
+    "url": "https://morrispropertyfirm.co.uk",
+    "logo": "https://morrispropertyfirm.co.uk/images/morris-property-logo.png",
+    "description": "Certified electricians providing installations, fault-finding, rewiring and inspection services in Bangor and Gwynedd.",
+    "areaServed": [
+      {"@type":"AdministrativeArea","name":"Bangor"},
+      {"@type":"AdministrativeArea","name":"Gwynedd"},
+      {"@type":"AdministrativeArea","name":"North Wales"}
+    ],
+    "telephone": "+44 7359 027096",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Bangor",
+      "addressLocality":"Bangor",
+      "addressRegion":"Gwynedd",
+      "postalCode":"LL57 2LA",
+      "addressCountry":"GB"
+    },
+    "sameAs":[
+      "https://www.facebook.com/profile.php?id=61556523552365"
+      "https://share.google/dxGAfA3UbZTOwArU7"
+    ],
+    "serviceType":"Electrical installations, repairs & inspection"
+  }
+  </script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -435,6 +487,16 @@ a:hover, a:focus {
   gtag('config', 'G-M9K646LK52');
 </script>
 <body>
+    <!-- Cookie Banner -->
+<div id="cookie-banner">
+  <div class="cookie-content">
+    <p>🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic. By clicking “Accept All”, you consent to our use of cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> for details.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookies">Accept All 😊</button>
+      <button id="declineCookies">Decline</button>
+    </div>
+  </div>
+</div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -503,9 +565,9 @@ a:hover, a:focus {
             <div class="row align-items-center pt-5 pb-5">
                 <!-- Left: Text content -->
                 <div class="col-md-6 mb-4 mb-md-0 hero-text">
-                    <h1 class="mb-3">Electrical Services</h1>
+                    <h1 class="mb-3">Electricians in Bangor, Gwynedd</h1>
                     <p class="lead mb-4">
-                        Providing top-notch electrical solutions to ensure your home or business runs smoothly and safely.
+                        Certified domestic & commercial electrical services—installations, rewires and safety testing across Bangor &amp; North Wales.
                     </p>
                     <div class="d-flex flex-wrap">
                         <a href="#contactSection" class="btn btn-cta me-3 mb-2">Get a Free Quote</a>
@@ -534,7 +596,7 @@ a:hover, a:focus {
         <div class="row g-4">
           <div class="col-md-4 text-center">
             <i class="bi bi-tools icon-why-mpf"></i>
-            <h5 class="mt-3">Certified Electricians</h5>
+            <h5 class="mt-3">Bangor Certified Electricians</h5>
             <p>Our team consists of fully certified and licensed electricians ensuring top-quality workmanship.</p>
           </div>
           <div class="col-md-4 text-center">
@@ -858,7 +920,7 @@ a:hover, a:focus {
         </div>
     </section>
 
-    <!-- FOOTER (UNCHANGED) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>
@@ -869,15 +931,30 @@ a:hover, a:focus {
             </p>
             <!-- Social Media Links -->
             <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook">
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61556523552365" 
+                  target="_blank" 
+                  aria-label="Facebook"
+                >
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
+                <a 
+                  href="https://share.google/dxGAfA3UbZTOwArU7" 
+                  target="_blank" 
+                  aria-label="Google"
+                >
+                    <i class="bi bi-google"></i>
                 </a>
             </div>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
-            <p><a href="https://cleandesignuk.com/" target="_blank">Website Designed By Clean Design UK</a></p>
+            <p>
+                <a 
+                  href="https://cleandesignuk.com/" 
+                  target="_blank"
+                >
+                  Website Designed By Clean Design UK
+                </a>
+            </p>
         </div>
     </footer>
 
@@ -993,5 +1070,7 @@ a:hover, a:focus {
             });
         });
     </script>
+    <link rel="stylesheet" href="cookie.css">
+<script src="cookie.js"></script>
 </body>
 </html>

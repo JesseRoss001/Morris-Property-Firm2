@@ -4,12 +4,26 @@
     <!-- Head Section -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painting Services | Morris Property Firm (MPF)</title>
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="Professional painting services by MPF in Bangor and North Wales. Interior and exterior painting, decorative finishes, and color consultations to transform your space with quality and precision.">
-    <!-- Meta Keywords for SEO -->
-    <meta name="keywords" content="Painting Services Bangor, Interior Painting, Exterior Painting, Decorative Finishes, North Wales Painting, Residential Painting, Commercial Painting, Color Consultation, Wallpaper Installation, Painting Maintenance">
-    
+    <title>Professional Painting Services Bangor | Morris Property Firm</title>
+
+  <meta name="description" content="Interior & exterior painting, decorative finishes and colour consultations. MPF’s qualified painters transform homes & businesses across Bangor and North Wales.">
+  <meta name="keywords" content="painting services Bangor, interior painting North Wales, exterior painters, commercial painting Bangor, colour consultation, decorative finishes">
+
+  <link rel="canonical" href="https://morrispropertyfirm.co.uk/painting.html">
+
+  <!-- Social cards -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Painting Services – Morris Property Firm">
+  <meta property="og:description" content="Transform your space with our expert interior & exterior painting team covering Bangor and North Wales.">
+  <meta property="og:url"         content="https://morrispropertyfirm.co.uk/painting.html">
+  <meta property="og:image"       content="https://morrispropertyfirm.co.uk/images/painting-4.jpg">
+  <meta property="og:locale"      content="en_GB">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" as="style">
+  <link rel="preload" href="images/morris-property-logo.png" as="image">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,6 +39,43 @@
     href="images/morris-property-logo.png" 
     alt="Morris Property Firm Logo"
   >
+
+<!-- LocalBusiness Schema -->
+   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "name": "Morris Property Firm – Bangor Painters",
+    "url": "https://morrispropertyfirm.co.uk",
+    "telephone": "+447359027096",
+    "email": "info@morrispropertyfirm.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "––",
+      "addressLocality": "Bangor",
+      "addressRegion": "Gwynedd",
+      "postalCode": "LL57 2LA",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.2270,
+      "longitude": -4.1284
+    },
+    "areaServed": [
+      "Bangor","Gwynedd","Anglesey","Menai Bridge","Caernarfon",
+      "Conwy","Llandudno","Colwyn Bay","Penmaenmawr"
+    ],
+    "openingHoursSpecification": [{
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens":"09:00","closes":"17:00"
+    }],
+    "logo": "https://morrispropertyfirm.co.uk/images/morris-property-logo.png",
+    "image": "https://morrispropertyfirm.co.uk/images/painting-4.jpg",
+    "description": "Interior & exterior painting contractors covering Bangor, Anglesey, Conwy & wider North Wales."
+  }
+  </script>
 
     <!-- Custom CSS -->
     <style>
@@ -445,6 +496,16 @@
   gtag('config', 'G-M9K646LK52');
 </script>
 <body>
+    <!-- Cookie Banner -->
+<div id="cookie-banner">
+  <div class="cookie-content">
+    <p>🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic. By clicking “Accept All”, you consent to our use of cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> for details.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookies">Accept All 😊</button>
+      <button id="declineCookies">Decline</button>
+    </div>
+  </div>
+</div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -513,9 +574,9 @@
             <div class="row align-items-center pt-5 pb-5">
                 <!-- Left: Text content -->
                 <div class="col-md-6 mb-4 mb-md-0 hero-text">
-                    <h1 class="mb-3">Painting Services</h1>
+                    <h1 class="mb-3">Painting & Decorating in Bangor | Serving All North Wales</h1>
                     <p class="lead mb-4">
-                        Transforming Spaces with Expert Interior and Exterior Painting
+                        From Penrhyn Bay to Caernarfon, we deliver flawless interior & exterior finishes.
                     </p>
                     <div class="d-flex flex-wrap">
                         <a href="#contactSection" class="btn btn-cta me-3 mb-2">Get a Free Quote</a>
@@ -855,26 +916,41 @@
         </div>
     </section>
 
-    <!-- Footer (Consistent) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>
                 Email: <a href="mailto:info@morrispropertyfirm.co.uk">info@morrispropertyfirm.co.uk</a>
             </p>
             <p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
             </p>
             <!-- Social Media Links -->
             <div class="social-icons mb-3">
-                <a href="https://www.facebook.com/profile.php?id=61556523552365" target="_blank" aria-label="Facebook">
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61556523552365" 
+                  target="_blank" 
+                  aria-label="Facebook"
+                >
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/YourInstagramPage" target="_blank" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
+                <a 
+                  href="https://share.google/dxGAfA3UbZTOwArU7" 
+                  target="_blank" 
+                  aria-label="Google"
+                >
+                    <i class="bi bi-google"></i>
                 </a>
             </div>
             <p>&copy; 2024 Morris Property Firm. All Rights Reserved.</p>
-            <p><a href="https://cleandesignuk.com/" target="_blank">Website Designed By Clean Design UK</a></p>
+            <p>
+                <a 
+                  href="https://cleandesignuk.com/" 
+                  target="_blank"
+                >
+                  Website Designed By Clean Design UK
+                </a>
+            </p>
         </div>
     </footer>
 
@@ -959,3 +1035,39 @@
     <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Web3Forms Submission Handling -->
+<!-- Web3Forms Submission Handling -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    form.reset();
+                } else {
+                    alert('There was an error submitting your form. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('There was an error submitting your form. Please try again.');
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="cookie.css">
+<script src="cookie.js"></script>
+</body>
+</html>
